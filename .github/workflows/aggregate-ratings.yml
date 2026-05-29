@@ -1,0 +1,65 @@
+name: aggregate-ratings
+on:
+  push:
+    paths:
+      - 'reviews/**/*.json'
+  workflow_dispatch:
+
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Aggregate ratings
+        run: |
+          python3 << 'EOF'
+          import json, os, glob
+          from collections import defaultdict
+
+          ratings = {"version": "1", "updated": "", "skills": {}}
+
+          # Scan all review files
+          for f in glob.glob("reviews/*/*.json"):
+              try:
+                  with open(f) as fh:
+                      data = json.load(fh)
+                  skill_id = f.split("/")[1]
+                  if skill_id not in ratings["skills"]:
+                      ratings["skills"][skill_id] = {
+                          "average": 0,
+                          "count": 0,
+                          "reviews": []
+                      }
+                  ratings["skills"][skill_id]["reviews"].append({
+                      "rating": data.get("rating", 0),
+                      "content": data.get("content", ""),
+                      "author": data.get("author", ""),
+                      "createdAt": data.get("createdAt", ""),
+                  })
+              except Exception:
+                  pass
+
+          # Calculate averages
+          from datetime import datetime, timezone
+          for sid, skill in ratings["skills"].items():
+              if skill["reviews"]:
+                  skill["average"] = round(
+                      sum(r["rating"] for r in skill["reviews"]) / len(skill["reviews"]), 1
+                  )
+                  skill["count"] = len(skill["reviews"])
+
+          ratings["updated"] = datetime.now(timezone.utc).isoformat()
+
+          with open("ratings.json", "w") as fh:
+              json.dump(ratings, fh, indent=2, ensure_ascii=False)
+          print(f"Aggregated {len(ratings['skills'])} skills with reviews")
+          EOF
+      - name: Commit updated ratings
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ratings.json
+          git diff --staged --quiet || git commit -m "chore: aggregate ratings [automated]"
+          git push

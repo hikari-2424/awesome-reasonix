@@ -1,0 +1,51 @@
+name: Skill Submission
+description: Submit a new Skill to the community
+title: "[Skill] "
+labels: ["skill-submission"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: Unique Skill identifier (letters/numbers/-/_)
+      placeholder: "my-awesome-skill"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: One-line summary of what the Skill does
+      placeholder: "Automatically..."
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Dev Tools
+        - Text Processing
+        - File Management
+        - System Control
+        - Learning & Research
+        - Data Tools
+        - Project Tools
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: Skill Content
+      description: Full markdown content (including frontmatter)
+      render: markdown
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have tested this Skill locally
+        - label: I agree to publish under CC0 license

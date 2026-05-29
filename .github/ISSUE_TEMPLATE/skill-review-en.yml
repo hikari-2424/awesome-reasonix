@@ -1,0 +1,31 @@
+name: Skill Review
+description: Rate and review a Skill
+title: "[Review] "
+labels: ["review"]
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill Name
+      description: The ID of the Skill you're reviewing
+    validations:
+      required: true
+  - type: dropdown
+    id: rating
+    attributes:
+      label: Rating
+      options:
+        - "5 - Excellent"
+        - "4 - Good"
+        - "3 - Okay"
+        - "2 - Needs work"
+        - "1 - Not recommended"
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: Review
+      description: Share your experience, suggestions, or issues
+    validations:
+      required: true

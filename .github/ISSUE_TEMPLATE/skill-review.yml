@@ -1,0 +1,31 @@
+name: Skill Review
+description: 给一个 Skill 打分和评价
+title: "[Review] "
+labels: ["review"]
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill 名称
+      description: 你要评价的 Skill 的 ID
+    validations:
+      required: true
+  - type: dropdown
+    id: rating
+    attributes:
+      label: 评分
+      options:
+        - "5 - 非常棒"
+        - "4 - 好用"
+        - "3 - 还行"
+        - "2 - 有改进空间"
+        - "1 - 不推荐"
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: 评价内容
+      description: 分享你的使用体验、建议或遇到的问题
+    validations:
+      required: true

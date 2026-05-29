@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Awesome Reasonix — Skills for Reasonix</title>
+<style>
+:root{--bg:#fff;--text:#1d1d1f;--text2:#6e6e73;--text3:#aeaeb2;--card:#fff;--card-border:#e5e5ea;--card-hover:#d2d2d7;--tag-bg:#f5f5f7;--tag-text:#6e6e73;--code-bg:#1d1d1f;--code-text:#98c379;--btn-bg:#f5f5f7;--btn-text:#1d1d1f;--btn-hover:#e5e5ea;--cta-bg:#fbfbfd;--input-border:#d2d2d7;--nav-border:rgba(0,0,0,.08);--footer-text:#aeaeb2}
+.dark{--bg:#0a0a0b;--text:#f5f5f7;--text2:#a1a1a6;--text3:#6e6e73;--card:#1a1a1c;--card-border:#2c2c2e;--card-hover:#3a3a3c;--tag-bg:#2c2c2e;--tag-text:#a1a1a6;--code-bg:#252528;--code-text:#b5e890;--btn-bg:#2c2c2e;--btn-text:#f5f5f7;--btn-hover:#3a3a3c;--cta-bg:#151516;--input-border:#3a3a3c;--nav-border:rgba(255,255,255,.08);--footer-text:#6e6e73}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;transition:background .3s,color .3s;min-height:100vh}
+nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--nav-border);padding:0 16px;height:48px;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+nav .brand{font-size:17px;font-weight:600;color:var(--text);text-decoration:none;letter-spacing:-.02em;white-space:nowrap}
+nav .tools{display:flex;align-items:center;gap:6px;flex-wrap:nowrap}
+nav .tools button{background:none;border:none;cursor:pointer;font-size:13px;color:var(--text2);padding:4px 6px;border-radius:6px;transition:all .15s;white-space:nowrap}
+nav .tools button:hover{background:var(--btn-bg);color:var(--text)}
+nav .tools .lang-btn.active{color:var(--text);background:var(--btn-bg);font-weight:500}
+.hero{text-align:center;padding:48px 16px 32px}
+.hero h1{font-size:36px;font-weight:700;letter-spacing:-.02em;margin-bottom:8px}
+.hero p{font-size:16px;color:var(--text2);margin-bottom:20px;line-height:1.4}
+.hero p code{background:var(--tag-bg);padding:2px 8px;border-radius:5px;font-size:14px;color:var(--text)}
+.hero .search{width:100%;max-width:400px;padding:11px 14px;border:1px solid var(--input-border);border-radius:10px;font-size:15px;background:var(--bg);color:var(--text);outline:none;margin-bottom:14px;transition:border .2s;-webkit-appearance:none}
+.hero .search:focus{border-color:var(--text3)}
+.hero .filters{display:flex;justify-content:center;gap:6px;flex-wrap:wrap}
+.hero .filters button{padding:6px 14px;border-radius:18px;border:none;font-size:13px;font-weight:500;cursor:pointer;background:var(--btn-bg);color:var(--text2);transition:all .15s}
+.hero .filters button.active{background:var(--text);color:var(--bg)}
+.cta{text-align:center;padding:0 16px 16px}
+.cta>div{display:inline-block;background:var(--cta-bg);border-radius:14px;padding:22px 28px;border:1px solid var(--card-border);max-width:100%}
+.cta h3{font-size:16px;font-weight:600;margin-bottom:4px}
+.cta p{font-size:13px;color:var(--text2);margin-bottom:10px}
+.cta a{display:inline-block;background:#0071e3;color:#fff;padding:9px 18px;border-radius:18px;text-decoration:none;font-size:13px;font-weight:500;transition:opacity .15s}
+.cta a:hover{opacity:.9}
+.grid{max-width:1100px;margin:0 auto;padding:16px;display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:14px;padding:18px;transition:all .2s;word-break:break-word}
+.card:hover{border-color:var(--card-hover);box-shadow:0 2px 12px rgba(0,0,0,.05)}
+.card .top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:6px}
+.card h3{font-size:15px;font-weight:600;letter-spacing:-.01em}
+.card h3 a{color:var(--text);text-decoration:none}
+.card h3 a:hover{color:#0071e3}
+.card .badge{font-size:10px;font-weight:500;background:var(--tag-bg);color:var(--tag-text);padding:2px 7px;border-radius:8px;white-space:nowrap;flex-shrink:0}
+.card .desc{font-size:13px;color:var(--text2);margin-bottom:10px;line-height:1.45}
+.card .tags{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px}
+.card .tag{font-size:10px;background:var(--tag-bg);color:var(--tag-text);padding:2px 7px;border-radius:5px}
+.card .rating{display:flex;align-items:center;gap:6px;margin-bottom:10px;font-size:12px}
+.card .rating .stars{color:#f59e0b}
+.card .rating .score{font-weight:600;color:var(--text)}
+.card .rating .count{color:var(--text3)}
+.card .install{display:flex;gap:4px;align-items:center;margin-bottom:8px}
+.card .install code{flex:1;font-size:10px;background:var(--code-bg);color:var(--code-text);padding:6px 8px;border-radius:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:'SF Mono',Monaco,Menlo,monospace}
+.card .install button{font-size:10px;padding:6px 10px;border:1px solid var(--card-border);border-radius:6px;background:var(--btn-bg);color:var(--text2);cursor:pointer;font-weight:500;white-space:nowrap;transition:all .15s}
+.card .install button:hover{background:var(--btn-hover);color:var(--text)}
+.card .actions{display:flex;gap:4px}
+.card .actions a{flex:1;text-align:center;padding:6px 0;border-radius:6px;font-size:11px;font-weight:500;text-decoration:none;transition:all .15s;border:1px solid var(--card-border);color:var(--text2);background:var(--btn-bg)}
+.card .actions a:hover{background:var(--btn-hover);color:var(--text)}
+.card .actions a.up:hover{color:#34c759;border-color:#34c759}
+.card .actions a.down:hover{color:#ff3b30;border-color:#ff3b30}
+.detail-page{max-width:760px;margin:0 auto;padding:24px 16px}
+.detail-page .back{font-size:13px;color:#0071e3;text-decoration:none;display:inline-block;margin-bottom:16px}
+.detail-page h2{font-size:24px;font-weight:700;letter-spacing:-.02em;margin-bottom:4px}
+.detail-page .meta{font-size:13px;color:var(--text2);margin-bottom:18px}
+.detail-page .install-bar{display:flex;gap:6px;margin-bottom:20px}
+.detail-page .install-bar code{flex:1;font-size:12px;background:var(--code-bg);color:var(--code-text);padding:10px 14px;border-radius:8px;font-family:'SF Mono',Monaco,Menlo,monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.detail-page .install-bar button{padding:8px 14px;border:1px solid var(--card-border);border-radius:8px;background:var(--btn-bg);color:var(--text2);cursor:pointer;font-size:12px;font-weight:500;white-space:nowrap}
+.detail-actions{display:flex;gap:6px;margin-bottom:20px;flex-wrap:wrap}
+.detail-actions a{text-decoration:none;font-size:12px;padding:7px 14px;border:1px solid var(--card-border);border-radius:8px;color:var(--text2);transition:all .15s;background:var(--btn-bg)}
+.detail-actions a:hover{background:var(--btn-hover);color:var(--text)}
+.detail-page .content{font-size:14px;line-height:1.7;color:var(--text);overflow-wrap:break-word}
+.detail-page .content h1{font-size:22px;margin:22px 0 10px}
+.detail-page .content h2{font-size:18px;margin:18px 0 8px}
+.detail-page .content h3{font-size:15px;margin:14px 0 6px}
+.detail-page .content p{margin-bottom:12px}
+.detail-page .content code{background:var(--tag-bg);padding:2px 5px;border-radius:4px;font-size:12px;color:var(--text)}
+.detail-page .content pre{background:var(--code-bg);color:var(--code-text);padding:14px;border-radius:8px;overflow-x:auto;margin-bottom:14px;font-size:12px;line-height:1.5;-webkit-overflow-scrolling:touch}
+.detail-page .content pre code{background:none;color:inherit;padding:0;font-size:12px;white-space:pre-wrap;word-break:break-all}
+.detail-page .content ul,.detail-page .content ol{padding-left:20px;margin-bottom:12px}
+.detail-page .content li{margin-bottom:3px}
+.detail-page .content table{width:100%;border-collapse:collapse;margin-bottom:14px;font-size:12px;display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.detail-page .content th{background:var(--tag-bg);padding:6px 10px;text-align:left;font-weight:600;border-bottom:2px solid var(--card-border);white-space:nowrap}
+.detail-page .content td{padding:6px 10px;border-bottom:1px solid var(--card-border)}
+.detail-page .content blockquote{border-left:3px solid var(--card-border);padding-left:12px;color:var(--text2);margin:12px 0}
+.reviews-section{margin-top:28px}
+.reviews-section h3{font-size:16px;font-weight:600;margin-bottom:10px}
+.review-item{border-bottom:1px solid var(--card-border);padding:10px 0}
+.review-item .rv-author{font-size:12px;color:var(--text2);margin-bottom:3px}
+.review-item .rv-content{font-size:13px;color:var(--text);line-height:1.5}
+.empty-state{text-align:center;padding:60px 16px;color:var(--text3);font-size:14px}
+footer{text-align:center;padding:32px 16px;font-size:11px;color:var(--footer-text);border-top:1px solid var(--nav-border);margin-top:32px}
+footer a{color:var(--text2);text-decoration:none}
+footer a:hover{color:var(--text)}
+footer .links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.spinner{text-align:center;padding:60px 16px;color:var(--text3)}
+
+@media(max-width:640px){
+  nav{padding:0 10px}
+  nav .brand{font-size:15px}
+  nav .tools{gap:2px}
+  nav .tools button{font-size:11px;padding:3px 4px}
+  .hero h1{font-size:26px}
+  .hero p{font-size:14px}
+  .grid{grid-template-columns:1fr;padding:10px;gap:10px}
+  .card{padding:14px}
+  .card .install code{font-size:9px}
+  .detail-page h2{font-size:20px}
+  .detail-actions a{font-size:11px;padding:6px 10px}
+  .cta>div{padding:18px 20px}
+}
+@media(max-width:380px){
+  nav .brand{font-size:14px}
+  nav .tools{gap:1px}
+  nav .tools button{font-size:10px;padding:2px 3px}
+  nav .tools .lang-btn{padding:2px 4px;font-size:9px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="brand" onclick="showHome();return false">Awesome Reasonix</a>
+  <div class="tools">
+    <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" data-lang="zh" onclick="setLang('zh')">中文</button>
+    <button class="lang-btn" data-lang="ru" onclick="setLang('ru')">РУ</button>
+    <button onclick="toggleDark()" style="font-size:15px" id="darkBtn">🌙</button>
+  </div>
+</nav>
+
+<div id="app"><div class="spinner" id="loadingText">Loading…</div></div>
+
+<footer>
+  <div class="links">
+    <a href="https://github.com/esengine/reasonix" target="_blank" data-i18n="ftReasonix">Reasonix GitHub</a>
+    <span style="color:var(--text3)">·</span>
+    <a href="https://github.com/hikari-2424/awesome-reasonix" target="_blank" data-i18n="ftCommunity">Community GitHub</a>
+    <span style="color:var(--text3)">·</span>
+    <a href="https://github.com/hikari-2424/awesome-reasonix/issues" target="_blank" data-i18n="ftFeedback">Feedback</a>
+  </div>
+</footer>
+
+<script>
+const RAW='https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main';
+const API='https://api.github.com/repos/hikari-2424/awesome-reasonix';
+let registry,ratings,lang='en';
+
+const T={
+en:{title:'Awesome Reasonix — Skills for Reasonix',heroTitle:'Skills for Reasonix',tagline:'Drop a markdown file into',done:'Done.',search:'Search skills…',all:'All',skills:'Skills',mcp:'MCP',badgeSkill:'Skill',badgeMcp:'MCP',share:'Share a Skill',shareDesc:'Open an issue on GitHub. Automated checks handle the rest.',submit:'Submit via Issue →',noResults:'No results.',notFound:'Not found.',noRatings:'No ratings',rate:'Rate',flag:'Flag',copy:'Copy',copied:'✓',back:'← Back',reviews:'Reviews',noreviews:'No reviews yet.',like:'Like',dislike:'Dislike',loading:'Loading…',nodata:'Failed to load.',ctatitle:'Have a Skill?',ctadesc:'Share it with the Reasonix community.',githubBtn:'GitHub',ftReasonix:'Reasonix GitHub',ftCommunity:'Community GitHub',ftFeedback:'Feedback'},
+zh:{title:'Awesome Reasonix — Reasonix 技能目录',heroTitle:'Reasonix 技能目录',tagline:'将 markdown 文件放入',done:'即可。',search:'搜索技能…',all:'全部',skills:'技能',mcp:'MCP',badgeSkill:'技能',badgeMcp:'MCP',share:'分享技能',shareDesc:'在 GitHub 上提交 Issue，自动检查会处理其余工作。',submit:'通过 Issue 提交 →',noResults:'没有找到匹配的技能。',notFound:'未找到该技能。',noRatings:'暂无评分',rate:'评分',flag:'举报',copy:'复制',copied:'✓',back:'← 返回',reviews:'评价',noreviews:'暂无评价。',like:'好用',dislike:'不好用',loading:'加载中…',nodata:'加载失败，请稍后重试。',ctatitle:'有技能想要分享？',ctadesc:'分享给 Reasonix 社区。',githubBtn:'GitHub',ftReasonix:'Reasonix 项目',ftCommunity:'社区仓库',ftFeedback:'留言反馈'},
+ru:{title:'Awesome Reasonix — Каталог навыков Reasonix',heroTitle:'Каталог навыков Reasonix',tagline:'Поместите markdown-файл в',done:'Готово.',search:'Поиск навыков…',all:'Все',skills:'Навыки',mcp:'MCP',badgeSkill:'Навык',badgeMcp:'MCP',share:'Поделиться навыком',shareDesc:'Откройте Issue на GitHub. Автоматические проверки сделают всё остальное.',submit:'Отправить через Issue →',noResults:'Ничего не найдено.',notFound:'Навык не найден.',noRatings:'Нет оценок',rate:'Оценка',flag:'Жалоба',copy:'Копировать',copied:'✓',back:'← Назад',reviews:'Отзывы',noreviews:'Пока нет отзывов.',like:'Нравится',dislike:'Не нравится',loading:'Загрузка…',nodata:'Не удалось загрузить. Попробуйте позже.',ctatitle:'Есть навык?',ctadesc:'Поделитесь с сообществом Reasonix.',githubBtn:'GitHub',ftReasonix:'Reasonix GitHub',ftCommunity:'Репозиторий',ftFeedback:'Обратная связь'}
+};
+
+const t=function(k){return T[lang][k]||T.en[k]||k};
+
+function applyLang(){
+  document.title=t('title');
+  var el=document.getElementById('loadingText');if(el)el.textContent=t('loading');
+  var els=document.querySelectorAll('[data-i18n]');for(var i=0;i<els.length;i++)els[i].textContent=t(els[i].dataset.i18n);
+  var btns=document.querySelectorAll('.lang-btn');for(var i=0;i<btns.length;i++){var b=btns[i];if(b.dataset.lang===lang)b.classList.add('active');else b.classList.remove('active')}
+}
+
+function setLang(l){lang=l;applyLang();showHome()}
+
+function toggleDark(){
+  document.body.classList.toggle('dark');
+  var btn=document.getElementById('darkBtn');if(btn)btn.textContent=document.body.classList.contains('dark')?'☀️':'🌙';
+  try{localStorage.setItem('dark',document.body.classList.contains('dark')?'1':'0')}catch(e){}
+}
+try{if(localStorage.getItem('dark')==='1')document.body.classList.add('dark')}catch(e){}
+document.addEventListener('DOMContentLoaded',function(){var btn=document.getElementById('darkBtn');if(btn&&document.body.classList.contains('dark'))btn.textContent='☀️'});
+
+async function load(){
+  try{var a=await fetch(RAW+'/registry.json');var b=await fetch(RAW+'/ratings.json');registry=await a.json();ratings=b.ok?await b.json():{skills:{}}}catch(e){document.getElementById('app').innerHTML='<div class=\"empty-state\">'+t('nodata')+'</div>';return}
+  applyLang();
+  if(window.location.hash)showDetail(window.location.hash.replace('#/skills/',''));else showHome()
+}
+
+function showHome(){
+  var skills=registry.entries.filter(function(s){return s.type==='skill'||s.type==='mcp'});
+  document.getElementById('app').innerHTML=
+'<div class="hero"><h1>'+t('heroTitle')+'</h1><p>'+t('tagline')+' <code>.reasonix/skills/</code> '+t('done')+'</p>'+
+'<input class="search" id="search" placeholder="'+t('search')+'" oninput="filter()">'+
+'<div class="filters"><button class="active" onclick="setF(\'all\',this)">'+t('all')+'</button><button onclick="setF(\'skills\',this)">'+t('skills')+'</button><button onclick="setF(\'mcp\',this)">'+t('mcp')+'</button></div></div>'+
+'<div class="cta"><div><h3>'+t('ctatitle')+'</h3><p>'+t('ctadesc')+'</p><a href="https://github.com/hikari-2424/awesome-reasonix/issues/new?template=skill-submit.yml" target="_blank">'+t('submit')+'</a></div></div>'+
+'<div class="grid" id="grid"></div>';
+  window._f='all';renderGrid(skills)
+}
+
+function setF(f,btn){window._f=f;var bs=document.querySelectorAll('.filters button');for(var i=0;i<bs.length;i++)bs[i].classList.remove('active');btn.classList.add('active');filter()}
+function filter(){var q=(document.getElementById('search')&&document.getElementById('search').value||'').toLowerCase();var f=window._f||'all';var list=registry.entries.slice();if(f==='skills')list=list.filter(function(s){return s.type==='skill'});if(f==='mcp')list=list.filter(function(s){return s.type==='mcp'});if(q)list=list.filter(function(s){return s.name.toLowerCase().indexOf(q)>=0||s.description.toLowerCase().indexOf(q)>=0});renderGrid(list)}
+
+function renderGrid(list){
+  var g=document.getElementById('grid');if(!g)return;
+  if(!list.length){g.innerHTML='<div class="empty-state">'+t('noResults')+'</div>';return}
+  var html='';
+  for(var i=0;i<list.length;i++){
+    var s=list[i];var r=ratings.skills[s.id];var avg=r&&r.average||0;var count=r&&r.count||0;
+    var stars='';for(var j=0;j<5;j++)stars+=j<Math.round(avg)?'★':'☆';
+    html+='<div class="card"><div class="top"><h3><a href="#/skills/'+s.id+'" onclick="showDetail(\''+s.id+'\');return false">'+esc(s.name)+'</a></h3><span class="badge">'+t(s.type==='mcp'?'badgeMcp':'badgeSkill')+'</span></div>'+
+'<div class="desc">'+esc(s.description)+'</div>'+
+'<div class="tags">'+(s.tags||[]).slice(0,3).map(function(x){return'<span class="tag">'+esc(x)+'</span>'}).join('')+'</div>'+
+'<div class="rating"><span class="stars">'+stars+'</span><span class="score">'+(count>0?avg.toFixed(1):'—')+'</span><span class="count">'+(count>0?'('+count+')':'')+'</span></div>'+
+(s.installCmd?'<div class="install"><code>'+esc(s.installCmd)+'</code><button onclick="copyText(\''+escJS(s.installCmd)+'\',this)">'+t('copy')+'</button></div>':'')+
+'<div class="actions"><a href="https://github.com/hikari-2424/awesome-reasonix/issues/new?template=skill-review.yml&title='+encodeURIComponent('[Review] '+s.id+' - ★★★★★')+'" target="_blank" class="up">👍 '+t('like')+'</a><a href="https://github.com/hikari-2424/awesome-reasonix/issues/new?template=skill-review.yml&title='+encodeURIComponent('[Review] '+s.id+' - ★☆☆☆☆')+'" target="_blank" class="down">👎 '+t('dislike')+'</a></div></div>';
+  }
+  g.innerHTML=html;
+}
+
+function copyText(text,btn){navigator.clipboard.writeText(text).then(function(){btn.textContent=t('copied');setTimeout(function(){btn.textContent=t('copy')},1500)})}
+
+async function showDetail(id){
+  var skill=null;for(var i=0;i<registry.entries.length;i++){if(registry.entries[i].id===id){skill=registry.entries[i];break}}
+  if(!skill){document.getElementById('app').innerHTML='<div class="empty-state">'+t('notFound')+'</div>';return}
+  document.getElementById('app').innerHTML='<div class="spinner">'+t('loading')+'</div>';
+
+  var content;try{var res=await fetch(RAW+'/skills/'+id+'.md');content=res.ok?await res.text():'# '+skill.name+'\n\n'+skill.description}catch(e){content='# '+skill.name+'\n\n'+skill.description}
+
+  var rv=ratings.skills[id];var avg=rv&&rv.average||0;var count=rv&&rv.count||0;
+  var stars='';for(var j=0;j<5;j++)stars+=j<Math.round(avg)?'★':'☆';
+
+  var revsHtml='';
+  try{var rr=await fetch(API+'/contents/reviews/'+id,{headers:{Accept:'application/vnd.github.v3+json'}});if(rr.ok){var files=await rr.json();var revs=[];for(var i=0;i<files.length;i++){if(!files[i].name.endsWith('.json'))continue;try{var rj=await fetch(files[i].download_url);revs.push(await rj.json())}catch(e){}}var valid=revs.filter(function(r){return r&&r.rating});if(valid.length){revsHtml='<div class="reviews-section"><h3>'+t('reviews')+' ('+valid.length+')</h3>';for(var i=0;i<valid.length;i++){revsHtml+='<div class="review-item"><div class="rv-author">';for(var j=0;j<valid[i].rating;j++)revsHtml+='★';revsHtml+=' '+esc(valid[i].author||'')+'</div><div class="rv-content">'+esc(valid[i].content||'')+'</div></div>'}revsHtml+='</div>'}}}catch(e){}
+
+  document.getElementById('app').innerHTML=
+'<div class="detail-page"><a href="#" class="back" onclick="showHome();return false">'+t('back')+'</a>'+
+'<h2>'+esc(skill.name)+'</h2><div class="meta">'+esc(skill.description)+' · '+(count>0?stars+' '+avg.toFixed(1)+' ('+count+')':t('noRatings'))+'</div>'+
+(skill.installCmd?'<div class="install-bar"><code>'+esc(skill.installCmd)+'</code><button onclick="copyText(\''+escJS(skill.installCmd)+'\',this)">'+t('copy')+'</button></div>':'')+
+'<div class="detail-actions">'+
+'<a href="https://github.com/hikari-2424/awesome-reasonix/issues/new?template=skill-review.yml&title='+encodeURIComponent('[Review] '+skill.id+' - ★★★★★')+'" target="_blank">👍 '+t('like')+'</a>'+
+'<a href="https://github.com/hikari-2424/awesome-reasonix/issues/new?template=skill-review.yml&title='+encodeURIComponent('[Review] '+skill.id+' - ★☆☆☆☆')+'" target="_blank">👎 '+t('dislike')+'</a>'+
+'<a href="'+skill.url+'" target="_blank">'+t('githubBtn')+'</a>'+
+'<a href="https://github.com/hikari-2424/awesome-reasonix/issues/new?template=skill-flag.yml&title='+encodeURIComponent('[Flag] '+skill.id)+'" target="_blank">'+t('flag')+'</a>'+
+'</div><div class="content">'+renderMD(content)+'</div>'+revsHtml+'</div>'
+}
+
+function renderMD(text){
+  var t=text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  t=t.replace(/```(\w*)\n([\s\S]*?)```/g,'<pre><code>$2</code></pre>');
+  t=t.replace(/`([^`]+)`/g,'<code>$1</code>');
+  t=t.replace(/^#### (.*$)/gm,'<h4>$1</h4>');
+  t=t.replace(/^### (.*$)/gm,'<h3>$1</h3>');
+  t=t.replace(/^## (.*$)/gm,'<h2>$1</h2>');
+  t=t.replace(/^# (.*$)/gm,'<h1>$1</h1>');
+  t=t.replace(/^\|(.+)\|\s*$/gm,function(m){if(m.indexOf('---')>=0)return'';return'<tr>'+m.split('|').filter(function(c){return c.trim()}).map(function(c){return'<td>'+c.trim()+'</td>'}).join('')+'</tr>'});
+  t=t.replace(/(<tr>.*<\/tr>\n?)+/g,'<table>$&</table>');
+  t=t.replace(/^- (.+)$/gm,'<li>$1</li>');
+  t=t.replace(/(<li>.*<\/li>\n?)+/g,'<ul>$&</ul>');
+  t=t.replace(/^> (.+)$/gm,'<blockquote>$1</blockquote>');
+  t=t.replace(/^(?!<[a-z]).+/gm,'<p>$&</p>');
+  t=t.replace(/\n\n/g,'');
+  return t
+}
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function escJS(s){return s.replace(/\\/g,'\\\\').replace(/'/g,"\\'")}
+
+load();window.addEventListener('hashchange',load);
+</script>
+</body>
+</html>

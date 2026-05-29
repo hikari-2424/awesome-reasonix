@@ -1,0 +1,69 @@
+name: Validate
+
+on:
+  pull_request:
+    paths:
+      - 'README.md'
+      - 'registry.json'
+      - 'skills/**'
+      - 'guides/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check registry.json is valid JSON
+        run: |
+          python3 -m json.tool registry.json > /dev/null && echo "✓ registry.json is valid"
+
+      - name: Check all linked files exist
+        run: |
+          errors=0
+          # Check skill files referenced in README
+          for f in $(grep -oP '\((skills/[^)]+\.md)\)' README.md | tr -d '()'); do
+            if [ -f "$f" ]; then
+              echo "✓ $f"
+            else
+              echo "✗ MISSING: $f"
+              errors=$((errors + 1))
+            fi
+          done
+          # Check guide files
+          for f in $(grep -oP '\((guides/[^)]+\.md)\)' README.md | tr -d '()'); do
+            if [ -f "$f" ]; then
+              echo "✓ $f"
+            else
+              echo "✗ MISSING: $f"
+              errors=$((errors + 1))
+            fi
+          done
+          if [ $errors -gt 0 ]; then
+            echo "::error::${errors} broken link(s) found"
+            exit 1
+          fi
+
+      - name: Check skill frontmatter
+        run: |
+          errors=0
+          for f in skills/*.md; do
+            if ! grep -q '^---$' "$f"; then
+              echo "✗ $f: missing frontmatter"
+              errors=$((errors + 1))
+              continue
+            fi
+            if ! grep -q '^name:' "$f"; then
+              echo "✗ $f: missing 'name' in frontmatter"
+              errors=$((errors + 1))
+            fi
+            if ! grep -q '^description:' "$f"; then
+              echo "✗ $f: missing 'description' in frontmatter"
+              errors=$((errors + 1))
+            fi
+            echo "✓ $f"
+          done
+          if [ $errors -gt 0 ]; then
+            echo "::error::${errors} skill(s) have invalid frontmatter"
+            exit 1
+          fi

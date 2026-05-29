@@ -1,0 +1,51 @@
+name: Skill Submission
+description: 提交一个新的 Skill 到社区
+title: "[Skill] "
+labels: ["skill-submission"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 名称
+      description: Skill 的唯一标识（字母/数字/-/_）
+      placeholder: "my-awesome-skill"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 简介
+      description: 一句话描述这个 Skill 做什么
+      placeholder: "帮你自动..."
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: 分类
+      options:
+        - 开发工具
+        - 文本处理
+        - 文件管理
+        - 系统控制
+        - 学习研究
+        - 数据处理
+        - 项目工具
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: Skill 内容
+      description: 完整的 markdown 内容（含 frontmatter）
+      render: markdown
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认
+      options:
+        - label: 我已经在本地测试过这个 Skill
+        - label: 我同意以 CC0 协议发布此内容

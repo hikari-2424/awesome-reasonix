@@ -1,0 +1,91 @@
+name: Auto-Moderate Content
+
+on:
+  push:
+    paths:
+      - 'ratings.json'
+      - 'flags/**/*.json'
+  workflow_dispatch:
+
+jobs:
+  moderate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check ratings and flags
+        id: check
+        run: |
+          python3 << 'PYEOF'
+          import json, os, glob
+          from datetime import datetime, timezone
+
+          quarantine = {"version": "1", "updated": "", "skills": {}}
+          if os.path.exists("quarantine.json"):
+              with open("quarantine.json") as f:
+                  try: quarantine = json.load(f)
+                  except: pass
+
+          ratings = {"skills": {}}
+          if os.path.exists("ratings.json"):
+              with open("ratings.json") as f:
+                  try: ratings = json.load(f)
+                  except: pass
+
+          changes = []
+          now = datetime.now(timezone.utc).isoformat()
+
+          for skill_id, data in ratings.get("skills", {}).items():
+              avg = data.get("average", 0)
+              count = data.get("count", 0)
+              if avg < 2.0 and count >= 3:
+                  if skill_id not in quarantine.get("skills", {}):
+                      quarantine["skills"][skill_id] = {
+                          "reason": "low-rating",
+                          "detail": f"Average {avg} from {count} reviews",
+                          "quarantinedAt": now,
+                          "status": "auto-hidden"
+                      }
+                      changes.append(f"{skill_id}: low rating ({avg}/{count})")
+
+          flag_counts = {}
+          for f in glob.glob("flags/*/*.json"):
+              if ".template" in f: continue
+              sid = f.split("/")[1]
+              try:
+                  with open(f) as fh:
+                      if json.load(fh).get("status") == "pending":
+                          flag_counts[sid] = flag_counts.get(sid, 0) + 1
+              except: pass
+
+          for sid, count in flag_counts.items():
+              if count >= 2:
+                  if sid not in quarantine.get("skills", {}):
+                      quarantine["skills"][sid] = {
+                          "reason": "multiple-flags",
+                          "detail": f"{count} pending flags",
+                          "quarantinedAt": now,
+                          "status": "auto-hidden"
+                      }
+                      changes.append(f"{sid}: {count} pending flags")
+
+          quarantine["updated"] = now
+          with open("quarantine.json", "w") as f:
+              json.dump(quarantine, f, indent=2, ensure_ascii=False)
+
+          with open(os.environ["GITHUB_OUTPUT"], "a") as out:
+              out.write(f"changes={'true' if changes else 'false'}\n")
+          for c in changes: print(c)
+          PYEOF
+
+      - name: Commit quarantine
+        if: steps.check.outputs.changes == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add quarantine.json
+          git diff --staged --quiet || git commit -m "chore: auto-moderate quarantine update"
+          git push

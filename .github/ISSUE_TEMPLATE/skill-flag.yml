@@ -1,0 +1,31 @@
+name: Skill Flag
+description: 举报有问题的 Skill（恶意代码、垃圾内容等）
+title: "[Flag] "
+labels: ["flag"]
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill 名称
+    validations:
+      required: true
+  - type: dropdown
+    id: reason
+    attributes:
+      label: 举报原因
+      options:
+        - 恶意代码
+        - 垃圾/无关内容
+        - 侵权
+        - 无法运行
+        - 描述不实
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 详细说明
+      description: 请具体描述问题
+    validations:
+      required: true

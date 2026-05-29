@@ -1,0 +1,31 @@
+name: Skill Flag
+description: Report a problematic Skill (malicious code, spam, etc.)
+title: "[Flag] "
+labels: ["flag"]
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill Name
+    validations:
+      required: true
+  - type: dropdown
+    id: reason
+    attributes:
+      label: Reason
+      options:
+        - Malicious code
+        - Spam/irrelevant
+        - Copyright violation
+        - Doesn't work
+        - Misleading description
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: Details
+      description: Please describe the issue specifically
+    validations:
+      required: true

@@ -1,0 +1,100 @@
+name: Auto-Approve Skills
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  validate:
+    if: contains(github.event.issue.labels.*.name, 'skill-submission')
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate skill submission
+        id: validate
+        run: |
+          ISSUE_BODY="${{ github.event.issue.body }}"
+          REJECT=""
+          WARNINGS=""
+
+          if [ -z "$ISSUE_BODY" ]; then
+            REJECT="内容为空"
+          fi
+
+          if ! echo "$ISSUE_BODY" | grep -q '^---$'; then
+            REJECT="缺少 YAML frontmatter（Skills 必须以 --- 开头并包含 name 和 description）"
+          fi
+
+          if ! echo "$ISSUE_BODY" | grep -q '^name:'; then
+            REJECT="缺少 name 字段"
+          fi
+
+          if ! echo "$ISSUE_BODY" | grep -q '^description:'; then
+            REJECT="缺少 description 字段"
+          fi
+
+          if [ ${#ISSUE_BODY} -lt 100 ]; then
+            REJECT="内容太短（最少 100 字符）"
+          fi
+
+          if echo "$ISSUE_BODY" | grep -qE 'rm -rf /|sudo rm|curl.*\| *sh$|curl.*\| *bash$|eval \$|DANGEROUSLY'; then
+            WARNINGS="⚠️ 包含潜在危险命令，请确认其必要性"
+          fi
+
+          echo "reject=$REJECT" >> $GITHUB_OUTPUT
+          echo "warnings=$WARNINGS" >> $GITHUB_OUTPUT
+
+      - name: Reject
+        if: steps.validate.outputs.reject != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `## ❌ 自动驳回\n\n${{ steps.validate.outputs.reject }}\n\n请修改后重新提交。`,
+            });
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['auto-rejected'],
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed',
+            });
+
+      - name: Approve
+        if: steps.validate.outputs.reject == ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            let body = '## ✅ 自动通过\n\n你的 Skill 已通过自动检查并被收录。';
+            const warnings = '${{ steps.validate.outputs.warnings }}';
+            if (warnings) body += '\n\n### ⚠️ 建议\n' + warnings;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['auto-approved'],
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed',
+            });
