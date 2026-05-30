@@ -1,6 +1,6 @@
 {
-  "version": "2",
-  "updated": "2026-05-30T14:00:20.582Z",
+  "version": "3",
+  "updated": "2026-05-30T14:13:05.381Z",
   "entries": [
     {
       "id": "file-organizer",
@@ -416,9 +416,9 @@
       "type": "skill",
       "name": "agent-harness-construction",
       "category": "AI与Agent",
-      "description": "Design and optimize AI agent action spaces, tool definitions, and observation formatting for higher completion rates.",
+      "description": "设计和优化 AI Agent 的动作空间、工具定义和观察格式，提升任务完成率。",
       "description_en": "Design and optimize AI agent action spaces, tool definitions, and observation formatting for higher completion rates.",
-      "description_ru": "Design and optimize AI agent action spaces, tool definitions, and observation formatting for higher completion rates.",
+      "description_ru": "Проектирование и оптимизация пространств действий, определений инструментов и форматов наблюдений для AI-агентов.",
       "tags": [
         "AI",
         "Agent",
@@ -443,12 +443,13 @@
       "type": "skill",
       "name": "agent-introspection-debugging",
       "category": "AI与Agent",
-      "description": "Structured self-debugging workflow for AI agent failures using capture, diagnosis, contained recovery, and introspect...",
+      "description": "AI Agent 故障的结构化自调试工作流：捕获、诊断、受限恢复、内省报告。",
       "description_en": "Structured self-debugging workflow for AI agent failures using capture, diagnosis, contained recovery, and introspect...",
-      "description_ru": "Structured self-debugging workflow for AI agent failures using capture, diagnosis, contained recovery, and introspect...",
+      "description_ru": "Структурированный рабочий процесс самодиагностики сбоев AI-агентов: захват, диагностика, восстановление, отчёт.",
       "tags": [
         "AI",
-        "Agent"
+        "Agent",
+        "调试"
       ],
       "tags_en": [
         "ai",
@@ -456,7 +457,8 @@
       ],
       "tags_ru": [
         "ИИ",
-        "Агент"
+        "Агент",
+        "отладка"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/agent-introspection-debugging.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/agent-introspection-debugging.md",
@@ -467,12 +469,13 @@
       "type": "skill",
       "name": "agent-sort",
       "category": "AI与Agent",
-      "description": "Build an evidence-backed ECC install plan for a specific repo by sorting skills, commands, rules, hooks, and extras i...",
+      "description": "为特定仓库构建 ECC 安装方案：将 skills/commands/rules/hooks 分类为 DAILY 和 LIBRARY 两个层级。",
       "description_en": "Build an evidence-backed ECC install plan for a specific repo by sorting skills, commands, rules, hooks, and extras i...",
-      "description_ru": "Build an evidence-backed ECC install plan for a specific repo by sorting skills, commands, rules, hooks, and extras i...",
+      "description_ru": "Построение плана установки ECC для репозитория с сортировкой навыков/команд/правил/хуков по уровням DAILY и LIBRARY.",
       "tags": [
         "AI",
-        "Agent"
+        "Agent",
+        "配置"
       ],
       "tags_en": [
         "ai",
@@ -480,7 +483,8 @@
       ],
       "tags_ru": [
         "ИИ",
-        "Агент"
+        "Агент",
+        "конфигурация"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/agent-sort.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/agent-sort.md",
@@ -491,17 +495,19 @@
       "type": "skill",
       "name": "agentic-engineering",
       "category": "AI与Agent",
-      "description": "Operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing.",
+      "description": "以 Agentic 工程师模式运作：评估优先执行、任务分解、成本感知模型路由。",
       "description_en": "Operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing.",
-      "description_ru": "Operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing.",
+      "description_ru": "Работа в режиме agentic-инженера: выполнение с приоритетом оценки, декомпозиция, маршрутизация моделей с учётом стоимости.",
       "tags": [
-        "Agent"
+        "Agent",
+        "工程"
       ],
       "tags_en": [
         "agent"
       ],
       "tags_ru": [
-        "Агент"
+        "Агент",
+        "инженерия"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/agentic-engineering.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/agentic-engineering.md",
@@ -512,12 +518,13 @@
       "type": "skill",
       "name": "ai-first-engineering",
       "category": "AI与Agent",
-      "description": "Engineering operating model for teams where AI agents generate a large share of implementation output.",
+      "description": "面向 AI Agent 主导开发的团队工程运作模型。",
       "description_en": "Engineering operating model for teams where AI agents generate a large share of implementation output.",
-      "description_ru": "Engineering operating model for teams where AI agents generate a large share of implementation output.",
+      "description_ru": "Инженерная операционная модель для команд, где AI-агенты генерируют большую часть реализации.",
       "tags": [
         "AI",
-        "Agent"
+        "工程",
+        "团队"
       ],
       "tags_en": [
         "ai",
@@ -525,7 +532,8 @@
       ],
       "tags_ru": [
         "ИИ",
-        "Агент"
+        "инженерия",
+        "команда"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/ai-first-engineering.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/ai-first-engineering.md",
@@ -536,14 +544,13 @@
       "type": "skill",
       "name": "ai-regression-testing",
       "category": "AI与Agent",
-      "description": "Regression testing strategies for AI-assisted development.",
+      "description": "AI 辅助开发的回归测试策略：沙盒 API 测试、自动化 Bug 检查、AI 盲点捕获。",
       "description_en": "Regression testing strategies for AI-assisted development.",
-      "description_ru": "Regression testing strategies for AI-assisted development.",
+      "description_ru": "Стратегии регрессионного тестирования для разработки с AI: тесты API в песочнице, автоматическая проверка ошибок.",
       "tags": [
         "AI",
         "测试",
-        "API",
-        "数据库"
+        "自动化"
       ],
       "tags_en": [
         "ai",
@@ -554,8 +561,7 @@
       "tags_ru": [
         "ИИ",
         "тестирование",
-        "API",
-        "база данных"
+        "автоматизация"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/ai-regression-testing.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/ai-regression-testing.md",
@@ -566,14 +572,13 @@
       "type": "skill",
       "name": "android-clean-architecture",
       "category": "移动与语言",
-      "description": "Clean Architecture patterns for Android and Kotlin Multiplatform projects 鈥?module structure, dependency rules, UseCa...",
+      "description": "Android 和 Kotlin Multiplatform 的 Clean Architecture 模式：模块结构、依赖规则、UseCase 设计。",
       "description_en": "Clean Architecture patterns for Android and Kotlin Multiplatform projects 鈥?module structure, dependency rules, UseCa...",
-      "description_ru": "Clean Architecture patterns for Android and Kotlin Multiplatform projects 鈥?module structure, dependency rules, UseCa...",
+      "description_ru": "Паттерны Clean Architecture для Android и Kotlin Multiplatform: структура модулей, правила зависимостей, UseCase.",
       "tags": [
-        "数据",
-        "模式",
         "Android",
-        "Kotlin"
+        "Kotlin",
+        "架构"
       ],
       "tags_en": [
         "data",
@@ -582,10 +587,9 @@
         "kotlin"
       ],
       "tags_ru": [
-        "данные",
-        "паттерны",
         "Android",
-        "Kotlin"
+        "Kotlin",
+        "архитектура"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/android-clean-architecture.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/android-clean-architecture.md",
@@ -596,17 +600,21 @@
       "type": "skill",
       "name": "api-connector-builder",
       "category": "API与集成",
-      "description": "Build a new API connector or provider by matching the target repo's existing integration pattern exactly.",
+      "description": "按目标仓库的现有集成模式构建新的 API 连接器或 Provider。",
       "description_en": "Build a new API connector or provider by matching the target repo's existing integration pattern exactly.",
-      "description_ru": "Build a new API connector or provider by matching the target repo's existing integration pattern exactly.",
+      "description_ru": "Создание нового API-коннектора или провайдера, следуя существующему шаблону интеграции целевого репозитория.",
       "tags": [
-        "API"
+        "API",
+        "集成",
+        "开发"
       ],
       "tags_en": [
         "api"
       ],
       "tags_ru": [
-        "API"
+        "API",
+        "интеграция",
+        "разработка"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/api-connector-builder.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/api-connector-builder.md",
@@ -617,14 +625,13 @@
       "type": "skill",
       "name": "api-design",
       "category": "API与集成",
-      "description": "REST API design patterns including resource naming, status codes, pagination, filtering, error responses, versioning,...",
+      "description": "REST API 设计模式：资源命名、状态码、分页、过滤、错误响应、版本控制。",
       "description_en": "REST API design patterns including resource naming, status codes, pagination, filtering, error responses, versioning,...",
-      "description_ru": "REST API design patterns including resource naming, status codes, pagination, filtering, error responses, versioning,...",
+      "description_ru": "Паттерны проектирования REST API: именование ресурсов, коды статуса, пагинация, фильтрация, ошибки, версионирование.",
       "tags": [
         "API",
-        "设计",
-        "代码",
-        "模式"
+        "REST",
+        "设计"
       ],
       "tags_en": [
         "api",
@@ -634,9 +641,8 @@
       ],
       "tags_ru": [
         "API",
-        "дизайн",
-        "код",
-        "паттерны"
+        "REST",
+        "дизайн"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/api-design.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/api-design.md",
@@ -647,17 +653,21 @@
       "type": "skill",
       "name": "article-writing",
       "category": "内容与设计",
-      "description": "Write articles, guides, blog posts, tutorials, newsletter issues, and other long-form content in a distinctive voice ...",
+      "description": "撰写文章、指南、博客、教程、 Newsletter 等长内容，风格独特统一。",
       "description_en": "Write articles, guides, blog posts, tutorials, newsletter issues, and other long-form content in a distinctive voice ...",
-      "description_ru": "Write articles, guides, blog posts, tutorials, newsletter issues, and other long-form content in a distinctive voice ...",
+      "description_ru": "Написание статей, руководств, блогов, учебников, новостных писем в уникальном узнаваемом стиле.",
       "tags": [
-        "工具"
+        "写作",
+        "内容",
+        "文档"
       ],
       "tags_en": [
         "tool"
       ],
       "tags_ru": [
-        "инструмент"
+        "текст",
+        "контент",
+        "документация"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/article-writing.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/article-writing.md",
@@ -668,17 +678,21 @@
       "type": "skill",
       "name": "automation-audit-ops",
       "category": "工作流与工具",
-      "description": "Evidence-first automation inventory and overlap audit workflow for ECC.",
+      "description": "ECC 自动化清单和重叠审计：证据优先，发现冗余和缺失。",
       "description_en": "Evidence-first automation inventory and overlap audit workflow for ECC.",
-      "description_ru": "Evidence-first automation inventory and overlap audit workflow for ECC.",
+      "description_ru": "Инвентаризация и аудит пересечений автоматизаций ECC: поиск дублирования и пробелов на основе доказательств.",
       "tags": [
-        "自动化"
+        "审计",
+        "自动化",
+        "ECC"
       ],
       "tags_en": [
         "automation"
       ],
       "tags_ru": [
-        "автоматизация"
+        "аудит",
+        "автоматизация",
+        "ECC"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/automation-audit-ops.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/automation-audit-ops.md",
@@ -689,13 +703,13 @@
       "type": "skill",
       "name": "autonomous-loops",
       "category": "AI与Agent",
-      "description": "\"Patterns and architectures for autonomous Claude Code loops 鈥?from simple sequential pipelines to RFC-driven multi-a...",
+      "description": "自主 Agent 循环模式：从简单顺序管道到 RFC 驱动的多 Agent 工作流。",
       "description_en": "\"Patterns and architectures for autonomous Claude Code loops 鈥?from simple sequential pipelines to RFC-driven multi-a...",
-      "description_ru": "\"Patterns and architectures for autonomous Claude Code loops 鈥?from simple sequential pipelines to RFC-driven multi-a...",
+      "description_ru": "Паттерны автономных циклов агентов: от простых последовательных конвейеров до многокомпонентных рабочих процессов на основе RFC.",
       "tags": [
         "Agent",
-        "代码",
-        "模式"
+        "自动化",
+        "循环"
       ],
       "tags_en": [
         "agent",
@@ -704,8 +718,8 @@
       ],
       "tags_ru": [
         "Агент",
-        "код",
-        "паттерны"
+        "автоматизация",
+        "циклы"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/autonomous-loops.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/autonomous-loops.md",
@@ -716,14 +730,13 @@
       "type": "skill",
       "name": "backend-patterns",
       "category": "后端开发",
-      "description": "Backend architecture patterns, API design, database optimization, and server-side best practices for Node.",
+      "description": "后端架构模式：API 设计、数据库优化、服务端最佳实践，覆盖 Node.js/Express/Next.js。",
       "description_en": "Backend architecture patterns, API design, database optimization, and server-side best practices for Node.",
-      "description_ru": "Backend architecture patterns, API design, database optimization, and server-side best practices for Node.",
+      "description_ru": "Паттерны бэкенд-архитектуры: проектирование API, оптимизация БД, лучшие практики для Node.js/Express/Next.js.",
       "tags": [
         "后端",
         "API",
-        "数据库",
-        "设计"
+        "数据库"
       ],
       "tags_en": [
         "backend",
@@ -734,8 +747,7 @@
       "tags_ru": [
         "бэкенд",
         "API",
-        "база данных",
-        "дизайн"
+        "база данных"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/backend-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/backend-patterns.md",
@@ -746,20 +758,22 @@
       "type": "skill",
       "name": "blueprint",
       "category": "AI与Agent",
-      "description": "Turn a one-line objective into a step-by-step construction plan for multi-session, multi-agent engineering projects.",
+      "description": "将一句话目标转化为多阶段、多 Agent 的工程蓝图，含依赖图、并行检测、审查关卡。",
       "description_en": "Turn a one-line objective into a step-by-step construction plan for multi-session, multi-agent engineering projects.",
-      "description_ru": "Turn a one-line objective into a step-by-step construction plan for multi-session, multi-agent engineering projects.",
+      "description_ru": "Превращение однострочной цели в пошаговый план для многосессионных проектов с графом зависимостей и контролем качества.",
       "tags": [
-        "AI",
-        "Agent"
+        "规划",
+        "Agent",
+        "多阶段"
       ],
       "tags_en": [
         "ai",
         "agent"
       ],
       "tags_ru": [
-        "ИИ",
-        "Агент"
+        "план",
+        "Агент",
+        "многоэтапный"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/blueprint.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/blueprint.md",
@@ -770,17 +784,21 @@
       "type": "skill",
       "name": "brand-voice",
       "category": "内容与设计",
-      "description": "Build a source-derived writing style profile from real posts, essays, launch notes, docs, or site copy, then reuse th...",
+      "description": "从真实帖子/文章/文档中提取写作风格特征，构建可复用的品牌语调配置文件。",
       "description_en": "Build a source-derived writing style profile from real posts, essays, launch notes, docs, or site copy, then reuse th...",
-      "description_ru": "Build a source-derived writing style profile from real posts, essays, launch notes, docs, or site copy, then reuse th...",
+      "description_ru": "Извлечение профиля писательского стиля из реальных публикаций для создания повторно используемого профиля бренда.",
       "tags": [
-        "文档"
+        "写作",
+        "品牌",
+        "风格"
       ],
       "tags_en": [
         "docs"
       ],
       "tags_ru": [
-        "документация"
+        "текст",
+        "бренд",
+        "стиль"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/brand-voice.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/brand-voice.md",
@@ -791,17 +809,21 @@
       "type": "skill",
       "name": "carrier-relationship-management",
       "category": "业务运营",
-      "description": "Codified expertise for managing carrier portfolios, negotiating freight rates, tracking carrier performance, allocati...",
+      "description": "承运商组合管理：费率谈判、绩效追踪、关系维护。",
       "description_en": "Codified expertise for managing carrier portfolios, negotiating freight rates, tracking carrier performance, allocati...",
-      "description_ru": "Codified expertise for managing carrier portfolios, negotiating freight rates, tracking carrier performance, allocati...",
+      "description_ru": "Управление портфелем перевозчиков: переговоры о ставках, отслеживание эффективности, поддержание отношений.",
       "tags": [
-        "AI"
+        "物流",
+        "供应链",
+        "运营"
       ],
       "tags_en": [
         "ai"
       ],
       "tags_ru": [
-        "ИИ"
+        "логистика",
+        "поставки",
+        "операции"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/carrier-relationship-management.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/carrier-relationship-management.md",
@@ -812,13 +834,13 @@
       "type": "skill",
       "name": "clickhouse-io",
       "category": "后端开发",
-      "description": "ClickHouse database patterns, query optimization, analytics, and data engineering best practices for high-performance...",
+      "description": "ClickHouse 数据库模式：查询优化、分析、数据工程最佳实践。",
       "description_en": "ClickHouse database patterns, query optimization, analytics, and data engineering best practices for high-performance...",
-      "description_ru": "ClickHouse database patterns, query optimization, analytics, and data engineering best practices for high-performance...",
+      "description_ru": "Паттерны ClickHouse: оптимизация запросов, аналитика, лучшие практики инженерии данных.",
       "tags": [
+        "ClickHouse",
         "数据库",
-        "数据",
-        "模式"
+        "分析"
       ],
       "tags_en": [
         "database",
@@ -826,9 +848,9 @@
         "patterns"
       ],
       "tags_ru": [
+        "ClickHouse",
         "база данных",
-        "данные",
-        "паттерны"
+        "аналитика"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/clickhouse-io.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/clickhouse-io.md",
@@ -839,16 +861,20 @@
       "type": "skill",
       "name": "code-tour",
       "category": "内容与设计",
-      "description": "Create CodeTour `.",
+      "description": "创建 CodeTour 文件——面向特定角色的分步代码走读，含真实文件和行号锚点。",
       "description_en": "Create CodeTour `.",
-      "description_ru": "Create CodeTour `.",
+      "description_ru": "Создание файлов CodeTour — пошаговых экскурсий по коду с привязкой к реальным файлам и строкам.",
       "tags": [
+        "文档",
+        "教程",
         "代码"
       ],
       "tags_en": [
         "code"
       ],
       "tags_ru": [
+        "документация",
+        "обучение",
         "код"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/code-tour.md",
@@ -860,14 +886,13 @@
       "type": "skill",
       "name": "coding-standards",
       "category": "模式与规范",
-      "description": "Baseline cross-project coding conventions for naming, readability, immutability, and code-quality review.",
+      "description": "跨项目编码规范基线：命名、可读性、不可变性、代码审查要点。",
       "description_en": "Baseline cross-project coding conventions for naming, readability, immutability, and code-quality review.",
-      "description_ru": "Baseline cross-project coding conventions for naming, readability, immutability, and code-quality review.",
+      "description_ru": "Базовые стандарты кодирования для всех проектов: именование, читаемость, иммутабельность, критерии ревью.",
       "tags": [
-        "AI",
-        "后端",
-        "前端",
-        "代码"
+        "规范",
+        "代码质量",
+        "最佳实践"
       ],
       "tags_en": [
         "ai",
@@ -876,10 +901,9 @@
         "code"
       ],
       "tags_ru": [
-        "ИИ",
-        "бэкенд",
-        "фронтенд",
-        "код"
+        "стандарты",
+        "качество кода",
+        "best practices"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/coding-standards.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/coding-standards.md",
@@ -890,17 +914,21 @@
       "type": "skill",
       "name": "compose-multiplatform-patterns",
       "category": "前端开发",
-      "description": "Compose Multiplatform and Jetpack Compose patterns for KMP projects 鈥?state management, navigation, theming, performa...",
+      "description": "Compose Multiplatform 和 Jetpack Compose 模式：状态管理、导航、主题、测试。",
       "description_en": "Compose Multiplatform and Jetpack Compose patterns for KMP projects 鈥?state management, navigation, theming, performa...",
-      "description_ru": "Compose Multiplatform and Jetpack Compose patterns for KMP projects 鈥?state management, navigation, theming, performa...",
+      "description_ru": "Паттерны Compose Multiplatform и Jetpack Compose: управление состоянием, навигация, темы, тестирование.",
       "tags": [
-        "模式"
+        "Compose",
+        "Kotlin",
+        "前端"
       ],
       "tags_en": [
         "patterns"
       ],
       "tags_ru": [
-        "паттерны"
+        "Compose",
+        "Kotlin",
+        "фронтенд"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/compose-multiplatform-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/compose-multiplatform-patterns.md",
@@ -911,17 +939,21 @@
       "type": "skill",
       "name": "connections-optimizer",
       "category": "通用工具",
-      "description": "Reorganize the user's X and LinkedIn network with review-first pruning, add/follow recommendations, and channel-speci...",
+      "description": "重组 X 和 LinkedIn 社交网络：审查优先的修剪、关注推荐、人脉变更。",
       "description_en": "Reorganize the user's X and LinkedIn network with review-first pruning, add/follow recommendations, and channel-speci...",
-      "description_ru": "Reorganize the user's X and LinkedIn network with review-first pruning, add/follow recommendations, and channel-speci...",
+      "description_ru": "Реорганизация сетей X и LinkedIn: очистка на основе анализа, рекомендации по подпискам, изменения связей.",
       "tags": [
-        "工具"
+        "社交",
+        "网络",
+        "优化"
       ],
       "tags_en": [
         "tool"
       ],
       "tags_ru": [
-        "инструмент"
+        "соцсети",
+        "сеть",
+        "оптимизация"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/connections-optimizer.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/connections-optimizer.md",
@@ -932,17 +964,21 @@
       "type": "skill",
       "name": "content-engine",
       "category": "内容与设计",
-      "description": "Create platform-native content systems for X, LinkedIn, TikTok, YouTube, newsletters, and repurposed multi-platform c...",
+      "description": "创建平台原生内容系统：X/LinkedIn/TikTok/YouTube/Newsletter 及多渠道分发。",
       "description_en": "Create platform-native content systems for X, LinkedIn, TikTok, YouTube, newsletters, and repurposed multi-platform c...",
-      "description_ru": "Create platform-native content systems for X, LinkedIn, TikTok, YouTube, newsletters, and repurposed multi-platform c...",
+      "description_ru": "Создание систем контента для платформ X, LinkedIn, TikTok, YouTube, рассылок и мультиканального распространения.",
       "tags": [
-        "AI"
+        "内容",
+        "社交媒体",
+        "自动化"
       ],
       "tags_en": [
         "ai"
       ],
       "tags_ru": [
-        "ИИ"
+        "контент",
+        "соцсети",
+        "автоматизация"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/content-engine.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/content-engine.md",
@@ -953,17 +989,21 @@
       "type": "skill",
       "name": "content-hash-cache-pattern",
       "category": "通用工具",
-      "description": "Cache expensive file processing results using SHA-256 content hashes 鈥?path-independent, auto-invalidating, with serv...",
+      "description": "基于 SHA-256 内容哈希的缓存模式：路径无关、自动失效、昂贵处理结果复用。",
       "description_en": "Cache expensive file processing results using SHA-256 content hashes 鈥?path-independent, auto-invalidating, with serv...",
-      "description_ru": "Cache expensive file processing results using SHA-256 content hashes 鈥?path-independent, auto-invalidating, with serv...",
+      "description_ru": "Паттерн кэширования на основе SHA-256 хешей содержимого: независимость от пути, автоинвалидация, повторное использование.",
       "tags": [
-        "工具"
+        "缓存",
+        "性能",
+        "模式"
       ],
       "tags_en": [
         "tool"
       ],
       "tags_ru": [
-        "инструмент"
+        "кэш",
+        "производительность",
+        "паттерн"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/content-hash-cache-pattern.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/content-hash-cache-pattern.md",
@@ -974,12 +1014,13 @@
       "type": "skill",
       "name": "continuous-agent-loop",
       "category": "AI与Agent",
-      "description": "Patterns for continuous autonomous agent loops with quality gates, evals, and recovery controls.",
+      "description": "持续自主 Agent 循环模式：质量门控、评估、恢复控制。",
       "description_en": "Patterns for continuous autonomous agent loops with quality gates, evals, and recovery controls.",
-      "description_ru": "Patterns for continuous autonomous agent loops with quality gates, evals, and recovery controls.",
+      "description_ru": "Паттерны непрерывных автономных циклов агентов с контролем качества, оценками и восстановлением.",
       "tags": [
         "Agent",
-        "模式"
+        "自动化",
+        "循环"
       ],
       "tags_en": [
         "agent",
@@ -987,7 +1028,8 @@
       ],
       "tags_ru": [
         "Агент",
-        "паттерны"
+        "автоматизация",
+        "циклы"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/continuous-agent-loop.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/continuous-agent-loop.md",
@@ -998,17 +1040,21 @@
       "type": "skill",
       "name": "continuous-learning-v2",
       "category": "AI与Agent",
-      "description": "Instinct-based learning system that observes sessions via hooks, creates atomic instincts with confidence scoring, an...",
+      "description": "基于 Instinct 的学习系统：通过 hooks 观察会话、创建原子 instinct、置信度评分。",
       "description_en": "Instinct-based learning system that observes sessions via hooks, creates atomic instincts with confidence scoring, an...",
-      "description_ru": "Instinct-based learning system that observes sessions via hooks, creates atomic instincts with confidence scoring, an...",
+      "description_ru": "Система обучения на основе Instinct: наблюдение сессий через хуки, создание атомарных instinct с оценкой уверенности.",
       "tags": [
-        "Agent"
+        "学习",
+        "Agent",
+        "hooks"
       ],
       "tags_en": [
         "agent"
       ],
       "tags_ru": [
-        "Агент"
+        "обучение",
+        "Агент",
+        "хуки"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/continuous-learning-v2.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/continuous-learning-v2.md",
@@ -1019,20 +1065,22 @@
       "type": "skill",
       "name": "continuous-learning",
       "category": "AI与Agent",
-      "description": "Automatically extract reusable patterns from Claude Code sessions and save them as learned skills for future use.",
+      "description": "从会话中自动提取可复用模式并保存为 learned skills。",
       "description_en": "Automatically extract reusable patterns from Claude Code sessions and save them as learned skills for future use.",
-      "description_ru": "Automatically extract reusable patterns from Claude Code sessions and save them as learned skills for future use.",
+      "description_ru": "Автоматическое извлечение повторно используемых паттернов из сессий и сохранение как изученных навыков.",
       "tags": [
-        "代码",
-        "模式"
+        "学习",
+        "Agent",
+        "自动化"
       ],
       "tags_en": [
         "code",
         "patterns"
       ],
       "tags_ru": [
-        "код",
-        "паттерны"
+        "обучение",
+        "Агент",
+        "автоматизация"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/continuous-learning.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/continuous-learning.md",
@@ -1043,20 +1091,22 @@
       "type": "skill",
       "name": "cost-aware-llm-pipeline",
       "category": "通用工具",
-      "description": "Cost optimization patterns for LLM API usage 鈥?model routing by task complexity, budget tracking, retry logic, and pr...",
+      "description": "LLM API 成本优化：按任务复杂度路由模型、预算追踪、响应缓存。",
       "description_en": "Cost optimization patterns for LLM API usage 鈥?model routing by task complexity, budget tracking, retry logic, and pr...",
-      "description_ru": "Cost optimization patterns for LLM API usage 鈥?model routing by task complexity, budget tracking, retry logic, and pr...",
+      "description_ru": "Оптимизация затрат на LLM API: маршрутизация моделей по сложности задач, отслеживание бюджета, кэширование.",
       "tags": [
-        "API",
-        "模式"
+        "LLM",
+        "成本",
+        "优化"
       ],
       "tags_en": [
         "api",
         "patterns"
       ],
       "tags_ru": [
-        "API",
-        "паттерны"
+        "LLM",
+        "стоимость",
+        "оптимизация"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/cost-aware-llm-pipeline.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/cost-aware-llm-pipeline.md",
@@ -1067,17 +1117,21 @@
       "type": "skill",
       "name": "council",
       "category": "AI与Agent",
-      "description": "Convene a four-voice council for ambiguous decisions, tradeoffs, and go/no-go calls.",
+      "description": "召集四角色理事会，处理模棱两可的决策、权衡和 go/no-go 判断。",
       "description_en": "Convene a four-voice council for ambiguous decisions, tradeoffs, and go/no-go calls.",
-      "description_ru": "Convene a four-voice council for ambiguous decisions, tradeoffs, and go/no-go calls.",
+      "description_ru": "Созыв совета из четырёх голосов для неоднозначных решений, компромиссов и оценок go/no-go.",
       "tags": [
-        "工具"
+        "Agent",
+        "决策",
+        "协作"
       ],
       "tags_en": [
         "tool"
       ],
       "tags_ru": [
-        "инструмент"
+        "Агент",
+        "решение",
+        "сотрудничество"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/council.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/council.md",
@@ -1088,20 +1142,22 @@
       "type": "skill",
       "name": "cpp-coding-standards",
       "category": "移动与语言",
-      "description": "C++ coding standards based on the C++ Core Guidelines (isocpp.",
+      "description": "基于 C++ Core Guidelines 的 C++ 编码标准，由 isocpp 维护。",
       "description_en": "C++ coding standards based on the C++ Core Guidelines (isocpp.",
-      "description_ru": "C++ coding standards based on the C++ Core Guidelines (isocpp.",
+      "description_ru": "Стандарты кодирования C++ на основе C++ Core Guidelines (isocpp).",
       "tags": [
-        "Git",
-        "代码"
+        "C++",
+        "规范",
+        "代码质量"
       ],
       "tags_en": [
         "git",
         "code"
       ],
       "tags_ru": [
-        "Git",
-        "код"
+        "C++",
+        "стандарты",
+        "качество кода"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/cpp-coding-standards.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/cpp-coding-standards.md",
@@ -1112,20 +1168,22 @@
       "type": "skill",
       "name": "cpp-testing",
       "category": "移动与语言",
-      "description": "Use only when writing/updating/fixing C++ tests, configuring GoogleTest/CTest, diagnosing failing or flaky tests, or ...",
+      "description": "C++ 测试模式：GoogleTest/CTest 配置、失败诊断、覆盖率。",
       "description_en": "Use only when writing/updating/fixing C++ tests, configuring GoogleTest/CTest, diagnosing failing or flaky tests, or ...",
-      "description_ru": "Use only when writing/updating/fixing C++ tests, configuring GoogleTest/CTest, diagnosing failing or flaky tests, or ...",
+      "description_ru": "Паттерны тестирования C++: GoogleTest, CTest, диагностика сбоев, покрытие.",
       "tags": [
-        "AI",
-        "测试"
+        "C++",
+        "测试",
+        "GoogleTest"
       ],
       "tags_en": [
         "ai",
         "testing"
       ],
       "tags_ru": [
-        "ИИ",
-        "тестирование"
+        "C++",
+        "тестирование",
+        "GoogleTest"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/cpp-testing.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/cpp-testing.md",
@@ -1136,17 +1194,21 @@
       "type": "skill",
       "name": "crosspost",
       "category": "内容与设计",
-      "description": "Multi-platform content distribution across X, LinkedIn, Threads, and Bluesky.",
+      "description": "跨平台内容分发：X、LinkedIn、Threads、Bluesky 同步发布。",
       "description_en": "Multi-platform content distribution across X, LinkedIn, Threads, and Bluesky.",
-      "description_ru": "Multi-platform content distribution across X, LinkedIn, Threads, and Bluesky.",
+      "description_ru": "Кроссплатформенное распространение контента в X, LinkedIn, Threads и Bluesky.",
       "tags": [
-        "模式"
+        "社交媒体",
+        "内容",
+        "自动化"
       ],
       "tags_en": [
         "patterns"
       ],
       "tags_ru": [
-        "паттерны"
+        "соцсети",
+        "контент",
+        "автоматизация"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/crosspost.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/crosspost.md",
@@ -1157,20 +1219,22 @@
       "type": "skill",
       "name": "csharp-testing",
       "category": "测试与质量",
-      "description": "C# and .NET testing patterns with xUnit, FluentAssertions, mocking, integration tests, and test organization best practi",
+      "description": "C#/.NET 测试模式：xUnit、FluentAssertions、Mocking、集成测试。",
       "description_en": "C# and .NET testing patterns with xUnit, FluentAssertions, mocking, integration tests, and test organization best practi",
-      "description_ru": "C# and .NET testing patterns with xUnit, FluentAssertions, mocking, integration tests, and test organization best practi",
+      "description_ru": "Паттерны тестирования C#/.NET: xUnit, FluentAssertions, mocking, интеграционные тесты.",
       "tags": [
+        "C#",
         "测试",
-        "模式"
+        ".NET"
       ],
       "tags_en": [
         "testing",
         "patterns"
       ],
       "tags_ru": [
+        "C#",
         "тестирование",
-        "паттерны"
+        ".NET"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/csharp-testing.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/csharp-testing.md",
@@ -1181,17 +1245,21 @@
       "type": "skill",
       "name": "customer-billing-ops",
       "category": "业务运营",
-      "description": "Operate customer billing workflows such as subscriptions, refunds, churn triage, billing-portal recovery, and plan an...",
+      "description": "客户账单运营：订阅管理、退款处理、流失分析、账单门户协调。",
       "description_en": "Operate customer billing workflows such as subscriptions, refunds, churn triage, billing-portal recovery, and plan an...",
-      "description_ru": "Operate customer billing workflows such as subscriptions, refunds, churn triage, billing-portal recovery, and plan an...",
+      "description_ru": "Управление биллингом клиентов: подписки, возвраты, анализ оттока, координация платёжного портала.",
       "tags": [
-        "工具"
+        "运营",
+        "账单",
+        "SaaS"
       ],
       "tags_en": [
         "tool"
       ],
       "tags_ru": [
-        "инструмент"
+        "операции",
+        "биллинг",
+        "SaaS"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/customer-billing-ops.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/customer-billing-ops.md",
@@ -1202,17 +1270,21 @@
       "type": "skill",
       "name": "customs-trade-compliance",
       "category": "业务运营",
-      "description": "Codified expertise for customs documentation, tariff classification, duty optimization, restricted party screening, a...",
+      "description": "海关贸易合规：报关文件、关税分类、受限方筛查、原产地规则。",
       "description_en": "Codified expertise for customs documentation, tariff classification, duty optimization, restricted party screening, a...",
-      "description_ru": "Codified expertise for customs documentation, tariff classification, duty optimization, restricted party screening, a...",
+      "description_ru": "Таможенное соответствие: документация, классификация тарифов, проверка ограничений, правила происхождения.",
       "tags": [
-        "工具"
+        "贸易",
+        "合规",
+        "海关"
       ],
       "tags_en": [
         "tool"
       ],
       "tags_ru": [
-        "инструмент"
+        "торговля",
+        "комплаенс",
+        "таможня"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/customs-trade-compliance.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/customs-trade-compliance.md",
@@ -1223,17 +1295,21 @@
       "type": "skill",
       "name": "dart-flutter-patterns",
       "category": "前端开发",
-      "description": "Production-ready Dart and Flutter patterns covering null safety, immutable state, async composition, widget architect...",
+      "description": "Dart/Flutter 生产级模式：空安全、不可变状态、异步组合、性能优化。",
       "description_en": "Production-ready Dart and Flutter patterns covering null safety, immutable state, async composition, widget architect...",
-      "description_ru": "Production-ready Dart and Flutter patterns covering null safety, immutable state, async composition, widget architect...",
+      "description_ru": "Продакшн-паттерны Dart и Flutter: null-безопасность, иммутабельность, асинхронная композиция, производительность.",
       "tags": [
-        "模式"
+        "Dart",
+        "Flutter",
+        "移动端"
       ],
       "tags_en": [
         "patterns"
       ],
       "tags_ru": [
-        "паттерны"
+        "Dart",
+        "Flutter",
+        "мобильный"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/dart-flutter-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/dart-flutter-patterns.md",
@@ -1244,17 +1320,21 @@
       "type": "skill",
       "name": "dashboard-builder",
       "category": "内容与设计",
-      "description": "Build monitoring dashboards that answer real operator questions for Grafana, SigNoz, and similar platforms.",
+      "description": "构建面向运维人员的监控仪表盘：Grafana、SigNoz 等平台。",
       "description_en": "Build monitoring dashboards that answer real operator questions for Grafana, SigNoz, and similar platforms.",
-      "description_ru": "Build monitoring dashboards that answer real operator questions for Grafana, SigNoz, and similar platforms.",
+      "description_ru": "Создание дашбордов мониторинга для операторов: Grafana, SigNoz и аналогичные платформы.",
       "tags": [
-        "工具"
+        "监控",
+        "仪表盘",
+        "DevOps"
       ],
       "tags_en": [
         "tool"
       ],
       "tags_ru": [
-        "инструмент"
+        "мониторинг",
+        "дашборд",
+        "DevOps"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/dashboard-builder.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/dashboard-builder.md",
@@ -1265,14 +1345,13 @@
       "type": "skill",
       "name": "data-scraper-agent",
       "category": "数据与研究",
-      "description": "Build a fully automated AI-powered data collection agent for any public source 鈥?job boards, prices, news, GitHub, sp...",
+      "description": "构建全自动 AI 数据采集 Agent：招聘、价格、新闻等公开来源。",
       "description_en": "Build a fully automated AI-powered data collection agent for any public source 鈥?job boards, prices, news, GitHub, sp...",
-      "description_ru": "Build a fully automated AI-powered data collection agent for any public source 鈥?job boards, prices, news, GitHub, sp...",
+      "description_ru": "Создание полностью автоматизированного AI-агента для сбора данных из открытых источников.",
       "tags": [
-        "AI",
-        "Agent",
-        "Git",
-        "数据"
+        "数据",
+        "爬虫",
+        "Agent"
       ],
       "tags_en": [
         "ai",
@@ -1281,10 +1360,9 @@
         "data"
       ],
       "tags_ru": [
-        "ИИ",
-        "Агент",
-        "Git",
-        "данные"
+        "данные",
+        "сбор",
+        "Агент"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/data-scraper-agent.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/data-scraper-agent.md",
@@ -1295,13 +1373,13 @@
       "type": "skill",
       "name": "database-migrations",
       "category": "后端开发",
-      "description": "Database migration best practices for schema changes, data migrations, rollbacks, and zero-downtime deployments acros...",
+      "description": "数据库迁移最佳实践：Schema 变更、数据迁移、回滚、零停机部署。",
       "description_en": "Database migration best practices for schema changes, data migrations, rollbacks, and zero-downtime deployments acros...",
-      "description_ru": "Database migration best practices for schema changes, data migrations, rollbacks, and zero-downtime deployments acros...",
+      "description_ru": "Лучшие практики миграции БД: изменение схемы, перенос данных, откат, развёртывание без простоя.",
       "tags": [
         "数据库",
-        "数据",
-        "Django"
+        "迁移",
+        "DevOps"
       ],
       "tags_en": [
         "database",
@@ -1310,8 +1388,8 @@
       ],
       "tags_ru": [
         "база данных",
-        "данные",
-        "Django"
+        "миграция",
+        "DevOps"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/database-migrations.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/database-migrations.md",
@@ -1322,20 +1400,22 @@
       "type": "skill",
       "name": "deep-research",
       "category": "数据与研究",
-      "description": "Multi-source deep research using firecrawl and exa MCPs.",
+      "description": "多源深度研究：利用 firecrawl 和 exa MCP 进行搜索、抓取、综合，产出附引用的报告。",
       "description_en": "Multi-source deep research using firecrawl and exa MCPs.",
-      "description_ru": "Multi-source deep research using firecrawl and exa MCPs.",
+      "description_ru": "Глубокое исследование из множества источников с использованием firecrawl и exa MCP: поиск, извлечение, синтез.",
       "tags": [
-        "Web",
-        "研究"
+        "研究",
+        "搜索",
+        "subagent"
       ],
       "tags_en": [
         "web",
         "research"
       ],
       "tags_ru": [
-        "веб",
-        "исследование"
+        "исследование",
+        "поиск",
+        "subagent"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/deep-research.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/deep-research.md",
@@ -1346,16 +1426,20 @@
       "type": "skill",
       "name": "defi-amm-security",
       "category": "安全与合规",
-      "description": "Security checklist for Solidity AMM contracts, liquidity pools, and swap flows.",
+      "description": "Solidity AMM 合约安全检查清单：流动性池、Swap 流程安全。",
       "description_en": "Security checklist for Solidity AMM contracts, liquidity pools, and swap flows.",
-      "description_ru": "Security checklist for Solidity AMM contracts, liquidity pools, and swap flows.",
+      "description_ru": "Чек-лист безопасности для Solidity AMM контрактов: пулы ликвидности, безопасность swap.",
       "tags": [
+        "DeFi",
+        "Solidity",
         "安全"
       ],
       "tags_en": [
         "security"
       ],
       "tags_ru": [
+        "DeFi",
+        "Solidity",
         "безопасность"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/defi-amm-security.md",
@@ -1367,14 +1451,13 @@
       "type": "skill",
       "name": "deployment-patterns",
       "category": "后端开发",
-      "description": "Deployment workflows, CI/CD pipeline patterns, Docker containerization, health checks, rollback strategies, and produ...",
+      "description": "部署工作流：CI/CD 管道、Docker 容器化、健康检查、回滚策略。",
       "description_en": "Deployment workflows, CI/CD pipeline patterns, Docker containerization, health checks, rollback strategies, and produ...",
-      "description_ru": "Deployment workflows, CI/CD pipeline patterns, Docker containerization, health checks, rollback strategies, and produ...",
+      "description_ru": "Рабочие процессы развёртывания: CI/CD пайплайны, Docker, проверки здоровья, стратегии отката.",
       "tags": [
-        "AI",
-        "Web",
-        "Docker",
-        "模式"
+        "部署",
+        "CI/CD",
+        "Docker"
       ],
       "tags_en": [
         "ai",
@@ -1383,10 +1466,9 @@
         "patterns"
       ],
       "tags_ru": [
-        "ИИ",
-        "веб",
-        "Docker",
-        "паттерны"
+        "развёртывание",
+        "CI/CD",
+        "Docker"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/deployment-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/deployment-patterns.md",
@@ -1397,14 +1479,13 @@
       "type": "skill",
       "name": "django-patterns",
       "category": "后端开发",
-      "description": "Django architecture patterns, REST API design with DRF, ORM best practices, caching, signals, middleware, and product...",
+      "description": "Django 架构模式：DRF REST API、ORM 最佳实践、缓存、信号、中间件。",
       "description_en": "Django architecture patterns, REST API design with DRF, ORM best practices, caching, signals, middleware, and product...",
-      "description_ru": "Django architecture patterns, REST API design with DRF, ORM best practices, caching, signals, middleware, and product...",
+      "description_ru": "Архитектурные паттерны Django: DRF REST API, лучшие практики ORM, кэширование, сигналы, middleware.",
       "tags": [
-        "API",
-        "设计",
-        "模式",
-        "Django"
+        "Django",
+        "Python",
+        "后端"
       ],
       "tags_en": [
         "api",
@@ -1413,10 +1494,9 @@
         "django"
       ],
       "tags_ru": [
-        "API",
-        "дизайн",
-        "паттерны",
-        "Django"
+        "Django",
+        "Python",
+        "бэкенд"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/django-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/django-patterns.md",
@@ -1427,20 +1507,22 @@
       "type": "skill",
       "name": "django-security",
       "category": "后端开发",
-      "description": "Django security best practices, authentication, authorization, CSRF protection, SQL injection prevention, XSS prevent...",
+      "description": "Django 安全最佳实践：认证、授权、CSRF 防护、SQL 注入预防。",
       "description_en": "Django security best practices, authentication, authorization, CSRF protection, SQL injection prevention, XSS prevent...",
-      "description_ru": "Django security best practices, authentication, authorization, CSRF protection, SQL injection prevention, XSS prevent...",
+      "description_ru": "Лучшие практики безопасности Django: аутентификация, авторизация, защита CSRF, предотвращение SQL-инъекций.",
       "tags": [
+        "Django",
         "安全",
-        "Django"
+        "Python"
       ],
       "tags_en": [
         "security",
         "django"
       ],
       "tags_ru": [
+        "Django",
         "безопасность",
-        "Django"
+        "Python"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/django-security.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/django-security.md",
@@ -1451,13 +1533,13 @@
       "type": "skill",
       "name": "django-tdd",
       "category": "后端开发",
-      "description": "Django testing strategies with pytest-django, TDD methodology, factory_boy, mocking, coverage, and testing Django RES...",
+      "description": "Django TDD 测试策略：pytest-django、factory_boy、Mocking、覆盖率。",
       "description_en": "Django testing strategies with pytest-django, TDD methodology, factory_boy, mocking, coverage, and testing Django RES...",
-      "description_ru": "Django testing strategies with pytest-django, TDD methodology, factory_boy, mocking, coverage, and testing Django RES...",
+      "description_ru": "Стратегии TDD для Django: pytest-django, factory_boy, mocking, покрытие кода.",
       "tags": [
+        "Django",
         "测试",
-        "API",
-        "Django"
+        "TDD"
       ],
       "tags_en": [
         "testing",
@@ -1465,9 +1547,9 @@
         "django"
       ],
       "tags_ru": [
+        "Django",
         "тестирование",
-        "API",
-        "Django"
+        "TDD"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/django-tdd.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/django-tdd.md",
@@ -1478,20 +1560,22 @@
       "type": "skill",
       "name": "django-verification",
       "category": "后端开发",
-      "description": "\"Verification loop for Django projects: migrations, linting, tests with coverage, security scans, and deployment read...",
+      "description": "Django 项目验证循环：迁移检查、Linting、测试覆盖率、安全扫描。",
       "description_en": "\"Verification loop for Django projects: migrations, linting, tests with coverage, security scans, and deployment read...",
-      "description_ru": "\"Verification loop for Django projects: migrations, linting, tests with coverage, security scans, and deployment read...",
+      "description_ru": "Цикл верификации проектов Django: проверка миграций, линтинг, тесты с покрытием, сканирование безопасности.",
       "tags": [
-        "安全",
-        "Django"
+        "Django",
+        "验证",
+        "CI"
       ],
       "tags_en": [
         "security",
         "django"
       ],
       "tags_ru": [
-        "безопасность",
-        "Django"
+        "Django",
+        "верификация",
+        "CI"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/django-verification.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/django-verification.md",
@@ -1502,14 +1586,13 @@
       "type": "skill",
       "name": "docker-patterns",
       "category": "后端开发",
-      "description": "Docker and Docker Compose patterns for local development, container security, networking, volume strategies, and mult...",
+      "description": "Docker/Docker Compose 模式：本地开发、容器安全、网络、数据卷。",
       "description_en": "Docker and Docker Compose patterns for local development, container security, networking, volume strategies, and mult...",
-      "description_ru": "Docker and Docker Compose patterns for local development, container security, networking, volume strategies, and mult...",
+      "description_ru": "Паттерны Docker и Docker Compose: локальная разработка, безопасность контейнеров, сеть, тома данных.",
       "tags": [
-        "AI",
-        "安全",
         "Docker",
-        "模式"
+        "DevOps",
+        "容器"
       ],
       "tags_en": [
         "ai",
@@ -1518,10 +1601,9 @@
         "patterns"
       ],
       "tags_ru": [
-        "ИИ",
-        "безопасность",
         "Docker",
-        "паттерны"
+        "DevOps",
+        "контейнер"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/docker-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/docker-patterns.md",
@@ -1532,20 +1614,22 @@
       "type": "skill",
       "name": "dotnet-patterns",
       "category": "后端开发",
-      "description": "Idiomatic C# and .",
+      "description": "C#/.NET 惯用模式：DI、配置、日志、EF Core、ASP.NET Core 最佳实践。",
       "description_en": "Idiomatic C# and .",
-      "description_ru": "Idiomatic C# and .",
+      "description_ru": "Идиоматические паттерны C#/.NET: DI, конфигурация, логирование, EF Core, лучшие практики ASP.NET Core.",
       "tags": [
-        "AI",
-        "模式"
+        ".NET",
+        "C#",
+        "后端"
       ],
       "tags_en": [
         "ai",
         "patterns"
       ],
       "tags_ru": [
-        "ИИ",
-        "паттерны"
+        ".NET",
+        "C#",
+        "бэкенд"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/dotnet-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/dotnet-patterns.md",
@@ -1556,12 +1640,13 @@
       "type": "skill",
       "name": "e2e-testing",
       "category": "测试与质量",
-      "description": "Playwright E2E testing patterns, Page Object Model, configuration, CI/CD integration, artifact management, and flaky ...",
+      "description": "Playwright E2E 测试模式：Page Object Model、配置、CI/CD 集成。",
       "description_en": "Playwright E2E testing patterns, Page Object Model, configuration, CI/CD integration, artifact management, and flaky ...",
-      "description_ru": "Playwright E2E testing patterns, Page Object Model, configuration, CI/CD integration, artifact management, and flaky ...",
+      "description_ru": "Паттерны E2E тестирования Playwright: Page Object Model, конфигурация, интеграция CI/CD.",
       "tags": [
         "测试",
-        "模式"
+        "Playwright",
+        "E2E"
       ],
       "tags_en": [
         "testing",
@@ -1569,7 +1654,8 @@
       ],
       "tags_ru": [
         "тестирование",
-        "паттерны"
+        "Playwright",
+        "E2E"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/e2e-testing.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/e2e-testing.md",
@@ -1580,17 +1666,21 @@
       "type": "skill",
       "name": "ecc-tools-cost-audit",
       "category": "工作流与工具",
-      "description": "Evidence-first ECC Tools burn and billing audit workflow.",
+      "description": "ECC 工具消耗和计费审计：证据优先的成本分析。",
       "description_en": "Evidence-first ECC Tools burn and billing audit workflow.",
-      "description_ru": "Evidence-first ECC Tools burn and billing audit workflow.",
+      "description_ru": "Аудит потребления и биллинга инструментов ECC на основе доказательств.",
       "tags": [
-        "Git"
+        "审计",
+        "成本",
+        "ECC"
       ],
       "tags_en": [
         "git"
       ],
       "tags_ru": [
-        "Git"
+        "аудит",
+        "стоимость",
+        "ECC"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/ecc-tools-cost-audit.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/ecc-tools-cost-audit.md",
@@ -1601,17 +1691,21 @@
       "type": "skill",
       "name": "email-ops",
       "category": "业务运营",
-      "description": "Evidence-first mailbox triage, drafting, send verification, and sent-mail-safe follow-up workflow for ECC.",
+      "description": "邮箱运营：收件分类、草拟、发送验证、已发送安全跟进。",
       "description_en": "Evidence-first mailbox triage, drafting, send verification, and sent-mail-safe follow-up workflow for ECC.",
-      "description_ru": "Evidence-first mailbox triage, drafting, send verification, and sent-mail-safe follow-up workflow for ECC.",
+      "description_ru": "Управление почтой: сортировка входящих, черновики, проверка отправки, безопасные follow-up.",
       "tags": [
-        "AI"
+        "邮件",
+        "运营",
+        "自动化"
       ],
       "tags_en": [
         "ai"
       ],
       "tags_ru": [
-        "ИИ"
+        "почта",
+        "операции",
+        "автоматизация"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/email-ops.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/email-ops.md",
@@ -1622,17 +1716,21 @@
       "type": "skill",
       "name": "energy-procurement",
       "category": "业务运营",
-      "description": "Codified expertise for electricity and gas procurement, tariff optimization, demand charge management, renewable PPA ...",
+      "description": "电力和燃气采购：电价优化、需量管理、合同谈判。",
       "description_en": "Codified expertise for electricity and gas procurement, tariff optimization, demand charge management, renewable PPA ...",
-      "description_ru": "Codified expertise for electricity and gas procurement, tariff optimization, demand charge management, renewable PPA ...",
+      "description_ru": "Закупка электроэнергии и газа: оптимизация тарифов, управление спросом, переговоры по контрактам.",
       "tags": [
-        "工具"
+        "能源",
+        "采购",
+        "优化"
       ],
       "tags_en": [
         "tool"
       ],
       "tags_ru": [
-        "инструмент"
+        "энергия",
+        "закупки",
+        "оптимизация"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/energy-procurement.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/energy-procurement.md",
@@ -1643,12 +1741,13 @@
       "type": "skill",
       "name": "enterprise-agent-ops",
       "category": "工作流与工具",
-      "description": "Operate long-lived agent workloads with observability, security boundaries, and lifecycle management.",
+      "description": "企业级 Agent 运营：可观测性、安全边界、生命周期管理。",
       "description_en": "Operate long-lived agent workloads with observability, security boundaries, and lifecycle management.",
-      "description_ru": "Operate long-lived agent workloads with observability, security boundaries, and lifecycle management.",
+      "description_ru": "Эксплуатация агентов корпоративного уровня: наблюдаемость, границы безопасности, управление жизненным циклом.",
       "tags": [
         "Agent",
-        "安全"
+        "企业",
+        "运维"
       ],
       "tags_en": [
         "agent",
@@ -1656,7 +1755,8 @@
       ],
       "tags_ru": [
         "Агент",
-        "безопасность"
+        "предприятие",
+        "эксплуатация"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/enterprise-agent-ops.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/enterprise-agent-ops.md",
@@ -1667,17 +1767,21 @@
       "type": "skill",
       "name": "eval-harness",
       "category": "AI与Agent",
-      "description": "Formal evaluation framework for Claude Code sessions implementing eval-driven development (EDD) principles.",
+      "description": "Claude Code 会话的正式评估框架，实现评估驱动开发 (EDD)。",
       "description_en": "Formal evaluation framework for Claude Code sessions implementing eval-driven development (EDD) principles.",
-      "description_ru": "Formal evaluation framework for Claude Code sessions implementing eval-driven development (EDD) principles.",
+      "description_ru": "Формальная система оценки для сессий Claude Code, реализующая разработку на основе оценок (EDD).",
       "tags": [
-        "代码"
+        "评估",
+        "Agent",
+        "质量"
       ],
       "tags_en": [
         "code"
       ],
       "tags_ru": [
-        "код"
+        "оценка",
+        "Агент",
+        "качество"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/eval-harness.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/eval-harness.md",
@@ -1688,17 +1792,21 @@
       "type": "skill",
       "name": "evm-token-decimals",
       "category": "通用工具",
-      "description": "Prevent silent decimal mismatch bugs across EVM chains.",
+      "description": "防止 EVM 链上的代币精度错误：跨链小数位差异检测。",
       "description_en": "Prevent silent decimal mismatch bugs across EVM chains.",
-      "description_ru": "Prevent silent decimal mismatch bugs across EVM chains.",
+      "description_ru": "Предотвращение ошибок десятичных разрядов токенов в EVM-совместимых цепочках.",
       "tags": [
-        "AI"
+        "EVM",
+        "代币",
+        "安全"
       ],
       "tags_en": [
         "ai"
       ],
       "tags_ru": [
-        "ИИ"
+        "EVM",
+        "токены",
+        "безопасность"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/evm-token-decimals.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/evm-token-decimals.md",
@@ -1709,14 +1817,13 @@
       "type": "skill",
       "name": "exa-search",
       "category": "API与集成",
-      "description": "Neural search via Exa MCP for web, code, and company research.",
+      "description": "通过 Exa MCP 进行神经搜索：Web、代码、公司研究。",
       "description_en": "Neural search via Exa MCP for web, code, and company research.",
-      "description_ru": "Neural search via Exa MCP for web, code, and company research.",
+      "description_ru": "Нейронный поиск через Exa MCP: веб, код, исследование компаний.",
       "tags": [
-        "AI",
-        "Web",
-        "研究",
-        "代码"
+        "搜索",
+        "MCP",
+        "研究"
       ],
       "tags_en": [
         "ai",
@@ -1725,10 +1832,9 @@
         "code"
       ],
       "tags_ru": [
-        "ИИ",
-        "веб",
-        "исследование",
-        "код"
+        "поиск",
+        "MCP",
+        "исследование"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/exa-search.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/exa-search.md",
@@ -1739,17 +1845,21 @@
       "type": "skill",
       "name": "fal-ai-media",
       "category": "API与集成",
-      "description": "Unified media generation via fal.",
+      "description": "通过 fal.ai 统一生成媒体内容：图像、视频、音频。",
       "description_en": "Unified media generation via fal.",
-      "description_ru": "Unified media generation via fal.",
+      "description_ru": "Унифицированная генерация медиа через fal.ai: изображения, видео, аудио.",
       "tags": [
-        "AI"
+        "AI",
+        "媒体",
+        "生成"
       ],
       "tags_en": [
         "ai"
       ],
       "tags_ru": [
-        "ИИ"
+        "ИИ",
+        "медиа",
+        "генерация"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/fal-ai-media.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/fal-ai-media.md",
@@ -1760,17 +1870,21 @@
       "type": "skill",
       "name": "finance-billing-ops",
       "category": "业务运营",
-      "description": "Evidence-first revenue, pricing, refunds, team-billing, and billing-model truth workflow for ECC.",
+      "description": "财务账单运营：收入、定价、退款、团队计费、计费模型管理。",
       "description_en": "Evidence-first revenue, pricing, refunds, team-billing, and billing-model truth workflow for ECC.",
-      "description_ru": "Evidence-first revenue, pricing, refunds, team-billing, and billing-model truth workflow for ECC.",
+      "description_ru": "Управление финансами и биллингом: доходы, ценообразование, возвраты, командные счета, модели оплаты.",
       "tags": [
-        "代码"
+        "财务",
+        "账单",
+        "SaaS"
       ],
       "tags_en": [
         "code"
       ],
       "tags_ru": [
-        "код"
+        "финансы",
+        "биллинг",
+        "SaaS"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/finance-billing-ops.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/finance-billing-ops.md",
@@ -1781,17 +1895,21 @@
       "type": "skill",
       "name": "foundation-models-on-device",
       "category": "通用工具",
-      "description": "Apple FoundationModels framework for on-device LLM 鈥?text generation, guided generation with @Generable, tool calling...",
+      "description": "Apple FoundationModels 框架：设备端 LLM 文本生成、引导生成。",
       "description_en": "Apple FoundationModels framework for on-device LLM 鈥?text generation, guided generation with @Generable, tool calling...",
-      "description_ru": "Apple FoundationModels framework for on-device LLM 鈥?text generation, guided generation with @Generable, tool calling...",
+      "description_ru": "Фреймворк Apple FoundationModels для on-device LLM: генерация текста, управляемая генерация.",
       "tags": [
-        "工具"
+        "Apple",
+        "LLM",
+        "移动端"
       ],
       "tags_en": [
         "tool"
       ],
       "tags_ru": [
-        "инструмент"
+        "Apple",
+        "LLM",
+        "мобильный"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/foundation-models-on-device.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/foundation-models-on-device.md",
@@ -1802,13 +1920,13 @@
       "type": "skill",
       "name": "frontend-design",
       "category": "前端开发",
-      "description": "Create distinctive, production-grade frontend interfaces with high design quality.",
+      "description": "创建独特、生产级的前端界面，注重高设计质量。",
       "description_en": "Create distinctive, production-grade frontend interfaces with high design quality.",
-      "description_ru": "Create distinctive, production-grade frontend interfaces with high design quality.",
+      "description_ru": "Создание уникальных интерфейсов продуктового уровня с высоким качеством дизайна.",
       "tags": [
         "前端",
-        "Web",
-        "设计"
+        "设计",
+        "UI"
       ],
       "tags_en": [
         "frontend",
@@ -1817,8 +1935,8 @@
       ],
       "tags_ru": [
         "фронтенд",
-        "веб",
-        "дизайн"
+        "дизайн",
+        "UI"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/frontend-design.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/frontend-design.md",
@@ -1829,12 +1947,13 @@
       "type": "skill",
       "name": "frontend-patterns",
       "category": "前端开发",
-      "description": "Frontend development patterns for React, Next.",
+      "description": "前端开发模式：React、Next.js 最佳实践、状态管理、性能优化。",
       "description_en": "Frontend development patterns for React, Next.",
-      "description_ru": "Frontend development patterns for React, Next.",
+      "description_ru": "Паттерны фронтенд-разработки: React, Next.js, управление состоянием, оптимизация производительности.",
       "tags": [
         "前端",
-        "模式"
+        "React",
+        "Next.js"
       ],
       "tags_en": [
         "frontend",
@@ -1842,7 +1961,8 @@
       ],
       "tags_ru": [
         "фронтенд",
-        "паттерны"
+        "React",
+        "Next.js"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/frontend-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/frontend-patterns.md",
@@ -1853,12 +1973,13 @@
       "type": "skill",
       "name": "frontend-slides",
       "category": "前端开发",
-      "description": "Create stunning, animation-rich HTML presentations from scratch or by converting PowerPoint files.",
+      "description": "创建动画丰富的 HTML 演示文稿，支持从 PowerPoint 转换。",
       "description_en": "Create stunning, animation-rich HTML presentations from scratch or by converting PowerPoint files.",
-      "description_ru": "Create stunning, animation-rich HTML presentations from scratch or by converting PowerPoint files.",
+      "description_ru": "Создание насыщенных анимацией HTML-презентаций с возможностью конвертации из PowerPoint.",
       "tags": [
         "前端",
-        "Web"
+        "演示",
+        "HTML"
       ],
       "tags_en": [
         "frontend",
@@ -1866,7 +1987,8 @@
       ],
       "tags_ru": [
         "фронтенд",
-        "веб"
+        "презентация",
+        "HTML"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/frontend-slides.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/frontend-slides.md",
@@ -1877,12 +1999,12 @@
       "type": "skill",
       "name": "github-ops",
       "category": "API与集成",
-      "description": "GitHub repository operations, automation, and management.",
+      "description": "GitHub 仓库操作：自动化、管理、批量处理。",
       "description_en": "GitHub repository operations, automation, and management.",
-      "description_ru": "GitHub repository operations, automation, and management.",
+      "description_ru": "Операции с репозиториями GitHub: автоматизация, управление, пакетная обработка.",
       "tags": [
+        "GitHub",
         "自动化",
-        "安全",
         "Git"
       ],
       "tags_en": [
@@ -1891,8 +2013,8 @@
         "git"
       ],
       "tags_ru": [
+        "GitHub",
         "автоматизация",
-        "безопасность",
         "Git"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/github-ops.md",
@@ -1904,13 +2026,13 @@
       "type": "skill",
       "name": "golang-patterns",
       "category": "后端开发",
-      "description": "Idiomatic Go patterns, best practices, and conventions for building robust, efficient, and maintainable Go applications.",
+      "description": "Go 惯用模式：错误处理、并发、接口设计、项目结构最佳实践。",
       "description_en": "Idiomatic Go patterns, best practices, and conventions for building robust, efficient, and maintainable Go applications.",
-      "description_ru": "Idiomatic Go patterns, best practices, and conventions for building robust, efficient, and maintainable Go applications.",
+      "description_ru": "Идиоматические паттерны Go: обработка ошибок, конкурентность, дизайн интерфейсов, структура проектов.",
       "tags": [
-        "AI",
-        "模式",
-        "Go"
+        "Go",
+        "后端",
+        "模式"
       ],
       "tags_en": [
         "ai",
@@ -1918,9 +2040,9 @@
         "golang"
       ],
       "tags_ru": [
-        "ИИ",
-        "паттерны",
-        "Go"
+        "Go",
+        "бэкенд",
+        "паттерны"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/golang-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/golang-patterns.md",
@@ -1931,13 +2053,13 @@
       "type": "skill",
       "name": "golang-testing",
       "category": "后端开发",
-      "description": "Go testing patterns including table-driven tests, subtests, benchmarks, fuzzing, and test coverage.",
+      "description": "Go 测试模式：表驱动测试、子测试、基准测试、Fuzzing、覆盖率。",
       "description_en": "Go testing patterns including table-driven tests, subtests, benchmarks, fuzzing, and test coverage.",
-      "description_ru": "Go testing patterns including table-driven tests, subtests, benchmarks, fuzzing, and test coverage.",
+      "description_ru": "Паттерны тестирования Go: табличные тесты, подтесты, бенчмарки, фаззинг, покрытие.",
       "tags": [
+        "Go",
         "测试",
-        "模式",
-        "Go"
+        "质量"
       ],
       "tags_en": [
         "testing",
@@ -1945,9 +2067,9 @@
         "golang"
       ],
       "tags_ru": [
+        "Go",
         "тестирование",
-        "паттерны",
-        "Go"
+        "качество"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/golang-testing.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/golang-testing.md",
@@ -1958,17 +2080,21 @@
       "type": "skill",
       "name": "google-workspace-ops",
       "category": "API与集成",
-      "description": "Operate across Google Drive, Docs, Sheets, and Slides as one workflow surface for plans, trackers, decks, and shared ...",
+      "description": "Google Workspace 统一操作：Drive、Docs、Sheets、Slides 一体化工作流。",
       "description_en": "Operate across Google Drive, Docs, Sheets, and Slides as one workflow surface for plans, trackers, decks, and shared ...",
-      "description_ru": "Operate across Google Drive, Docs, Sheets, and Slides as one workflow surface for plans, trackers, decks, and shared ...",
+      "description_ru": "Единый интерфейс для Google Workspace: Drive, Docs, Sheets, Slides как одна рабочая поверхность.",
       "tags": [
-        "文档"
+        "Google",
+        "文档",
+        "自动化"
       ],
       "tags_en": [
         "docs"
       ],
       "tags_ru": [
-        "документация"
+        "Google",
+        "документы",
+        "автоматизация"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/google-workspace-ops.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/google-workspace-ops.md",
@@ -1979,13 +2105,13 @@
       "type": "skill",
       "name": "healthcare-phi-compliance",
       "category": "安全与合规",
-      "description": "Protected Health Information (PHI) and Personally Identifiable Information (PII) compliance patterns for healthcare a...",
+      "description": "PHI/PII 合规模式：医疗数据保护、去标识化、访问控制。",
       "description_en": "Protected Health Information (PHI) and Personally Identifiable Information (PII) compliance patterns for healthcare a...",
-      "description_ru": "Protected Health Information (PHI) and Personally Identifiable Information (PII) compliance patterns for healthcare a...",
+      "description_ru": "Паттерны соответствия PHI/PII: защита медицинских данных, деидентификация, контроль доступа.",
       "tags": [
-        "AI",
-        "数据",
-        "模式"
+        "医疗",
+        "合规",
+        "安全"
       ],
       "tags_en": [
         "ai",
@@ -1993,9 +2119,9 @@
         "patterns"
       ],
       "tags_ru": [
-        "ИИ",
-        "данные",
-        "паттерны"
+        "медицина",
+        "комплаенс",
+        "безопасность"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/healthcare-phi-compliance.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/healthcare-phi-compliance.md",
@@ -2006,17 +2132,21 @@
       "type": "skill",
       "name": "hipaa-compliance",
       "category": "安全与合规",
-      "description": "HIPAA-specific entrypoint for healthcare privacy and security work.",
+      "description": "HIPAA 专用入口：医疗隐私和安全合规工作流。",
       "description_en": "HIPAA-specific entrypoint for healthcare privacy and security work.",
-      "description_ru": "HIPAA-specific entrypoint for healthcare privacy and security work.",
+      "description_ru": "Специализированный вход для HIPAA: рабочие процессы конфиденциальности и безопасности в здравоохранении.",
       "tags": [
-        "安全"
+        "HIPAA",
+        "合规",
+        "医疗"
       ],
       "tags_en": [
         "security"
       ],
       "tags_ru": [
-        "безопасность"
+        "HIPAA",
+        "комплаенс",
+        "медицина"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/hipaa-compliance.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/hipaa-compliance.md",
@@ -2027,17 +2157,21 @@
       "type": "skill",
       "name": "hookify-rules",
       "category": "工作流与工具",
-      "description": "This skill should be used when the user asks to create a hookify rule, write a hook rule, configure hookify, add a ho...",
+      "description": "创建和配置 Hookify 规则：自动化触发器、事件响应。",
       "description_en": "This skill should be used when the user asks to create a hookify rule, write a hook rule, configure hookify, add a ho...",
-      "description_ru": "This skill should be used when the user asks to create a hookify rule, write a hook rule, configure hookify, add a ho...",
+      "description_ru": "Создание и настройка правил Hookify: автоматические триггеры, реакция на события.",
       "tags": [
-        "模式"
+        "hooks",
+        "自动化",
+        "配置"
       ],
       "tags_en": [
         "patterns"
       ],
       "tags_ru": [
-        "паттерны"
+        "хуки",
+        "автоматизация",
+        "конфигурация"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/hookify-rules.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/hookify-rules.md",
@@ -2048,17 +2182,21 @@
       "type": "skill",
       "name": "inventory-demand-planning",
       "category": "业务运营",
-      "description": "Codified expertise for demand forecasting, safety stock optimization, replenishment planning, and promotional lift es...",
+      "description": "库存需求规划：需求预测、安全库存优化、补货计划。",
       "description_en": "Codified expertise for demand forecasting, safety stock optimization, replenishment planning, and promotional lift es...",
-      "description_ru": "Codified expertise for demand forecasting, safety stock optimization, replenishment planning, and promotional lift es...",
+      "description_ru": "Планирование запасов и спроса: прогнозирование, оптимизация страхового запаса, планирование пополнения.",
       "tags": [
-        "AI"
+        "供应链",
+        "库存",
+        "规划"
       ],
       "tags_en": [
         "ai"
       ],
       "tags_ru": [
-        "ИИ"
+        "поставки",
+        "запасы",
+        "планирование"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/inventory-demand-planning.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/inventory-demand-planning.md",
@@ -2069,17 +2207,21 @@
       "type": "skill",
       "name": "investor-materials",
       "category": "内容与设计",
-      "description": "Create and update pitch decks, one-pagers, investor memos, accelerator applications, financial models, and fundraisin...",
+      "description": "创建和更新融资材料：Pitch Deck、一页纸、投资人备忘录、财务模型。",
       "description_en": "Create and update pitch decks, one-pagers, investor memos, accelerator applications, financial models, and fundraisin...",
-      "description_ru": "Create and update pitch decks, one-pagers, investor memos, accelerator applications, financial models, and fundraisin...",
+      "description_ru": "Создание и обновление материалов для инвесторов: питч-дек, one-pager, меморандумы, финансовые модели.",
       "tags": [
-        "AI"
+        "融资",
+        "创业",
+        "文档"
       ],
       "tags_en": [
         "ai"
       ],
       "tags_ru": [
-        "ИИ"
+        "инвестиции",
+        "стартап",
+        "документы"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/investor-materials.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/investor-materials.md",
@@ -2090,17 +2232,21 @@
       "type": "skill",
       "name": "investor-outreach",
       "category": "内容与设计",
-      "description": "Draft cold emails, warm intro blurbs, follow-ups, update emails, and investor communications for fundraising.",
+      "description": "投资人外联：冷邮件、暖介绍、跟进信、投资人通讯。",
       "description_en": "Draft cold emails, warm intro blurbs, follow-ups, update emails, and investor communications for fundraising.",
-      "description_ru": "Draft cold emails, warm intro blurbs, follow-ups, update emails, and investor communications for fundraising.",
+      "description_ru": "Связь с инвесторами: холодные письма, тёплые представления, follow-up, рассылки.",
       "tags": [
-        "AI"
+        "融资",
+        "外联",
+        "写作"
       ],
       "tags_en": [
         "ai"
       ],
       "tags_ru": [
-        "ИИ"
+        "инвестиции",
+        "коммуникация",
+        "текст"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/investor-outreach.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/investor-outreach.md",
@@ -2111,20 +2257,22 @@
       "type": "skill",
       "name": "iterative-retrieval",
       "category": "数据与研究",
-      "description": "Pattern for progressively refining context retrieval to solve the subagent context problem.",
+      "description": "渐进式上下文检索模式：解决 Subagent 上下文问题。",
       "description_en": "Pattern for progressively refining context retrieval to solve the subagent context problem.",
-      "description_ru": "Pattern for progressively refining context retrieval to solve the subagent context problem.",
+      "description_ru": "Паттерн итеративного уточнения поиска контекста для решения проблемы контекста subagent.",
       "tags": [
-        "Agent",
-        "subagent"
+        "检索",
+        "RAG",
+        "Agent"
       ],
       "tags_en": [
         "agent",
         "subagent"
       ],
       "tags_ru": [
-        "Агент",
-        "subagent"
+        "поиск",
+        "RAG",
+        "Агент"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/iterative-retrieval.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/iterative-retrieval.md",
@@ -2135,12 +2283,13 @@
       "type": "skill",
       "name": "java-coding-standards",
       "category": "移动与语言",
-      "description": "\"Java coding standards for Spring Boot services: naming, immutability, Optional usage, streams, exceptions, generics,...",
+      "description": "Java 编码标准（Spring Boot）：命名、不可变性、Optional 使用、Stream、异常处理。",
       "description_en": "\"Java coding standards for Spring Boot services: naming, immutability, Optional usage, streams, exceptions, generics,...",
-      "description_ru": "\"Java coding standards for Spring Boot services: naming, immutability, Optional usage, streams, exceptions, generics,...",
+      "description_ru": "Стандарты кодирования Java для Spring Boot: именование, иммутабельность, Optional, Stream, обработка исключений.",
       "tags": [
         "Java",
-        "Spring"
+        "Spring",
+        "规范"
       ],
       "tags_en": [
         "java",
@@ -2148,7 +2297,8 @@
       ],
       "tags_ru": [
         "Java",
-        "Spring"
+        "Spring",
+        "стандарты"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/java-coding-standards.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/java-coding-standards.md",
@@ -2159,20 +2309,22 @@
       "type": "skill",
       "name": "jira-integration",
       "category": "API与集成",
-      "description": "Use this skill when retrieving Jira tickets, analyzing requirements, updating ticket status, adding comments, or tran...",
+      "description": "Jira 集成：检索工单、分析需求、更新状态、添加评论。",
       "description_en": "Use this skill when retrieving Jira tickets, analyzing requirements, updating ticket status, adding comments, or tran...",
-      "description_ru": "Use this skill when retrieving Jira tickets, analyzing requirements, updating ticket status, adding comments, or tran...",
+      "description_ru": "Интеграция с Jira: получение задач, анализ требований, обновление статуса, добавление комментариев.",
       "tags": [
-        "API",
-        "模式"
+        "Jira",
+        "集成",
+        "项目管理"
       ],
       "tags_en": [
         "api",
         "patterns"
       ],
       "tags_ru": [
-        "API",
-        "паттерны"
+        "Jira",
+        "интеграция",
+        "управление"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/jira-integration.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/jira-integration.md",
@@ -2183,13 +2335,13 @@
       "type": "skill",
       "name": "jpa-patterns",
       "category": "移动与语言",
-      "description": "JPA/Hibernate patterns for entity design, relationships, query optimization, transactions, auditing, indexing, pagina...",
+      "description": "JPA/Hibernate 模式：实体设计、关系映射、查询优化、事务、审计。",
       "description_en": "JPA/Hibernate patterns for entity design, relationships, query optimization, transactions, auditing, indexing, pagina...",
-      "description_ru": "JPA/Hibernate patterns for entity design, relationships, query optimization, transactions, auditing, indexing, pagina...",
+      "description_ru": "Паттерны JPA/Hibernate: дизайн сущностей, отношения, оптимизация запросов, транзакции, аудит.",
       "tags": [
-        "设计",
-        "模式",
-        "Spring"
+        "Java",
+        "JPA",
+        "数据库"
       ],
       "tags_en": [
         "design",
@@ -2197,9 +2349,9 @@
         "spring"
       ],
       "tags_ru": [
-        "дизайн",
-        "паттерны",
-        "Spring"
+        "Java",
+        "JPA",
+        "база данных"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/jpa-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/jpa-patterns.md",
@@ -2210,17 +2362,21 @@
       "type": "skill",
       "name": "knowledge-ops",
       "category": "数据与研究",
-      "description": "Knowledge base management, ingestion, sync, and retrieval across multiple storage layers (local files, MCP memory, ve...",
+      "description": "知识库管理：摄取、同步、检索，跨本地文件/向量库/图数据库多层存储。",
       "description_en": "Knowledge base management, ingestion, sync, and retrieval across multiple storage layers (local files, MCP memory, ve...",
-      "description_ru": "Knowledge base management, ingestion, sync, and retrieval across multiple storage layers (local files, MCP memory, ve...",
+      "description_ru": "Управление базой знаний: приём, синхронизация, поиск по нескольким слоям хранения.",
       "tags": [
-        "Git"
+        "知识库",
+        "RAG",
+        "数据"
       ],
       "tags_en": [
         "git"
       ],
       "tags_ru": [
-        "Git"
+        "знания",
+        "RAG",
+        "данные"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/knowledge-ops.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/knowledge-ops.md",
@@ -2231,14 +2387,13 @@
       "type": "skill",
       "name": "kotlin-coroutines-flows",
       "category": "移动与语言",
-      "description": "Kotlin Coroutines and Flow patterns for Android and KMP 鈥?structured concurrency, Flow operators, StateFlow, error ha...",
+      "description": "Kotlin Coroutines 和 Flow 模式：结构化并发、Flow 操作符、StateFlow/SharedFlow。",
       "description_en": "Kotlin Coroutines and Flow patterns for Android and KMP 鈥?structured concurrency, Flow operators, StateFlow, error ha...",
-      "description_ru": "Kotlin Coroutines and Flow patterns for Android and KMP 鈥?structured concurrency, Flow operators, StateFlow, error ha...",
+      "description_ru": "Паттерны Kotlin Coroutines и Flow: структурированная конкурентность, операторы Flow, StateFlow/SharedFlow.",
       "tags": [
-        "测试",
-        "模式",
-        "Android",
-        "Kotlin"
+        "Kotlin",
+        "协程",
+        "Android"
       ],
       "tags_en": [
         "testing",
@@ -2247,10 +2402,9 @@
         "kotlin"
       ],
       "tags_ru": [
-        "тестирование",
-        "паттерны",
-        "Android",
-        "Kotlin"
+        "Kotlin",
+        "корутины",
+        "Android"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/kotlin-coroutines-flows.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/kotlin-coroutines-flows.md",
@@ -2261,13 +2415,13 @@
       "type": "skill",
       "name": "kotlin-exposed-patterns",
       "category": "移动与语言",
-      "description": "JetBrains Exposed ORM patterns including DSL queries, DAO pattern, transactions, HikariCP connection pooling, Flyway ...",
+      "description": "JetBrains Exposed ORM 模式：DSL 查询、DAO 模式、事务、HikariCP 连接池。",
       "description_en": "JetBrains Exposed ORM patterns including DSL queries, DAO pattern, transactions, HikariCP connection pooling, Flyway ...",
-      "description_ru": "JetBrains Exposed ORM patterns including DSL queries, DAO pattern, transactions, HikariCP connection pooling, Flyway ...",
+      "description_ru": "Паттерны JetBrains Exposed ORM: DSL-запросы, паттерн DAO, транзакции, пул соединений HikariCP.",
       "tags": [
-        "AI",
-        "模式",
-        "Kotlin"
+        "Kotlin",
+        "ORM",
+        "数据库"
       ],
       "tags_en": [
         "ai",
@@ -2275,9 +2429,9 @@
         "kotlin"
       ],
       "tags_ru": [
-        "ИИ",
-        "паттерны",
-        "Kotlin"
+        "Kotlin",
+        "ORM",
+        "база данных"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/kotlin-exposed-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/kotlin-exposed-patterns.md",
@@ -2288,14 +2442,13 @@
       "type": "skill",
       "name": "kotlin-ktor-patterns",
       "category": "移动与语言",
-      "description": "Ktor server patterns including routing DSL, plugins, authentication, Koin DI, kotlinx.",
+      "description": "Ktor 服务器模式：路由 DSL、插件、认证、Koin DI、序列化。",
       "description_en": "Ktor server patterns including routing DSL, plugins, authentication, Koin DI, kotlinx.",
-      "description_ru": "Ktor server patterns including routing DSL, plugins, authentication, Koin DI, kotlinx.",
+      "description_ru": "Паттерны Ktor сервера: DSL маршрутизации, плагины, аутентификация, Koin DI, сериализация.",
       "tags": [
-        "测试",
-        "Web",
-        "模式",
-        "Kotlin"
+        "Kotlin",
+        "Ktor",
+        "后端"
       ],
       "tags_en": [
         "testing",
@@ -2304,10 +2457,9 @@
         "kotlin"
       ],
       "tags_ru": [
-        "тестирование",
-        "веб",
-        "паттерны",
-        "Kotlin"
+        "Kotlin",
+        "Ktor",
+        "бэкенд"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/kotlin-ktor-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/kotlin-ktor-patterns.md",
@@ -2318,13 +2470,13 @@
       "type": "skill",
       "name": "kotlin-patterns",
       "category": "移动与语言",
-      "description": "Idiomatic Kotlin patterns, best practices, and conventions for building robust, efficient, and maintainable Kotlin ap...",
+      "description": "Kotlin 惯用模式：最佳实践、惯例，构建健壮高效的 Kotlin 代码。",
       "description_en": "Idiomatic Kotlin patterns, best practices, and conventions for building robust, efficient, and maintainable Kotlin ap...",
-      "description_ru": "Idiomatic Kotlin patterns, best practices, and conventions for building robust, efficient, and maintainable Kotlin ap...",
+      "description_ru": "Идиоматические паттерны Kotlin: лучшие практики и соглашения для надёжного и эффективного кода.",
       "tags": [
-        "AI",
+        "Kotlin",
         "模式",
-        "Kotlin"
+        "最佳实践"
       ],
       "tags_en": [
         "ai",
@@ -2332,9 +2484,9 @@
         "kotlin"
       ],
       "tags_ru": [
-        "ИИ",
+        "Kotlin",
         "паттерны",
-        "Kotlin"
+        "best practices"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/kotlin-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/kotlin-patterns.md",
@@ -2345,13 +2497,13 @@
       "type": "skill",
       "name": "kotlin-testing",
       "category": "移动与语言",
-      "description": "Kotlin testing patterns with Kotest, MockK, coroutine testing, property-based testing, and Kover coverage.",
+      "description": "Kotlin 测试模式：Kotest、MockK、协程测试、属性测试、Kover 覆盖率。",
       "description_en": "Kotlin testing patterns with Kotest, MockK, coroutine testing, property-based testing, and Kover coverage.",
-      "description_ru": "Kotlin testing patterns with Kotest, MockK, coroutine testing, property-based testing, and Kover coverage.",
+      "description_ru": "Паттерны тестирования Kotlin: Kotest, MockK, тестирование корутин, property-based testing, Kover.",
       "tags": [
+        "Kotlin",
         "测试",
-        "模式",
-        "Kotlin"
+        "质量"
       ],
       "tags_en": [
         "testing",
@@ -2359,9 +2511,9 @@
         "kotlin"
       ],
       "tags_ru": [
+        "Kotlin",
         "тестирование",
-        "паттерны",
-        "Kotlin"
+        "качество"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/kotlin-testing.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/kotlin-testing.md",
@@ -2372,13 +2524,13 @@
       "type": "skill",
       "name": "laravel-patterns",
       "category": "后端开发",
-      "description": "Laravel architecture patterns, routing/controllers, Eloquent ORM, service layers, queues, events, caching, and API re...",
+      "description": "Laravel 架构模式：路由/控制器、Eloquent ORM、服务层、队列、事件、缓存。",
       "description_en": "Laravel architecture patterns, routing/controllers, Eloquent ORM, service layers, queues, events, caching, and API re...",
-      "description_ru": "Laravel architecture patterns, routing/controllers, Eloquent ORM, service layers, queues, events, caching, and API re...",
+      "description_ru": "Архитектурные паттерны Laravel: маршруты/контроллеры, Eloquent ORM, сервисный слой, очереди, события, кэш.",
       "tags": [
-        "API",
-        "模式",
-        "Laravel"
+        "Laravel",
+        "PHP",
+        "后端"
       ],
       "tags_en": [
         "api",
@@ -2386,9 +2538,9 @@
         "laravel"
       ],
       "tags_ru": [
-        "API",
-        "паттерны",
-        "Laravel"
+        "Laravel",
+        "PHP",
+        "бэкенд"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/laravel-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/laravel-patterns.md",
@@ -2399,17 +2551,21 @@
       "type": "skill",
       "name": "laravel-plugin-discovery",
       "category": "后端开发",
-      "description": "Discover and evaluate Laravel packages via LaraPlugins.",
+      "description": "通过 LaraPlugins 发现和评估 Laravel 扩展包。",
       "description_en": "Discover and evaluate Laravel packages via LaraPlugins.",
-      "description_ru": "Discover and evaluate Laravel packages via LaraPlugins.",
+      "description_ru": "Поиск и оценка пакетов Laravel через LaraPlugins.",
       "tags": [
-        "Laravel"
+        "Laravel",
+        "插件",
+        "PHP"
       ],
       "tags_en": [
         "laravel"
       ],
       "tags_ru": [
-        "Laravel"
+        "Laravel",
+        "плагины",
+        "PHP"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/laravel-plugin-discovery.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/laravel-plugin-discovery.md",
@@ -2420,20 +2576,22 @@
       "type": "skill",
       "name": "laravel-security",
       "category": "后端开发",
-      "description": "Laravel security best practices for authn/authz, validation, CSRF, mass assignment, file uploads, secrets, rate limit...",
+      "description": "Laravel 安全最佳实践：认证/授权、验证、CSRF、批量赋值、文件上传、密钥管理。",
       "description_en": "Laravel security best practices for authn/authz, validation, CSRF, mass assignment, file uploads, secrets, rate limit...",
-      "description_ru": "Laravel security best practices for authn/authz, validation, CSRF, mass assignment, file uploads, secrets, rate limit...",
+      "description_ru": "Лучшие практики безопасности Laravel: аутентификация, валидация, CSRF, массовое присваивание, загрузка файлов.",
       "tags": [
+        "Laravel",
         "安全",
-        "Laravel"
+        "PHP"
       ],
       "tags_en": [
         "security",
         "laravel"
       ],
       "tags_ru": [
+        "Laravel",
         "безопасность",
-        "Laravel"
+        "PHP"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/laravel-security.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/laravel-security.md",
@@ -2444,14 +2602,13 @@
       "type": "skill",
       "name": "laravel-tdd",
       "category": "后端开发",
-      "description": "Test-driven development for Laravel with PHPUnit and Pest, factories, database testing, fakes, and coverage targets.",
+      "description": "Laravel TDD：PHPUnit/Pest、Factory、数据库测试、Fakes、覆盖率。",
       "description_en": "Test-driven development for Laravel with PHPUnit and Pest, factories, database testing, fakes, and coverage targets.",
-      "description_ru": "Test-driven development for Laravel with PHPUnit and Pest, factories, database testing, fakes, and coverage targets.",
+      "description_ru": "TDD для Laravel: PHPUnit, Pest, фабрики, тестирование БД, имитации, покрытие.",
       "tags": [
+        "Laravel",
         "测试",
-        "数据库",
-        "数据",
-        "Laravel"
+        "TDD"
       ],
       "tags_en": [
         "testing",
@@ -2460,10 +2617,9 @@
         "laravel"
       ],
       "tags_ru": [
+        "Laravel",
         "тестирование",
-        "база данных",
-        "данные",
-        "Laravel"
+        "TDD"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/laravel-tdd.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/laravel-tdd.md",
@@ -2474,20 +2630,22 @@
       "type": "skill",
       "name": "laravel-verification",
       "category": "后端开发",
-      "description": "\"Verification loop for Laravel projects: env checks, linting, static analysis, tests with coverage, security scans, a...",
+      "description": "Laravel 验证循环：环境检查、Linting、静态分析、测试覆盖率、安全扫描。",
       "description_en": "\"Verification loop for Laravel projects: env checks, linting, static analysis, tests with coverage, security scans, a...",
-      "description_ru": "\"Verification loop for Laravel projects: env checks, linting, static analysis, tests with coverage, security scans, a...",
+      "description_ru": "Цикл верификации Laravel: проверка окружения, линтинг, статический анализ, тесты с покрытием, безопасность.",
       "tags": [
-        "安全",
-        "Laravel"
+        "Laravel",
+        "验证",
+        "CI"
       ],
       "tags_en": [
         "security",
         "laravel"
       ],
       "tags_ru": [
-        "безопасность",
-        "Laravel"
+        "Laravel",
+        "верификация",
+        "CI"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/laravel-verification.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/laravel-verification.md",
@@ -2498,20 +2656,22 @@
       "type": "skill",
       "name": "lead-intelligence",
       "category": "内容与设计",
-      "description": "AI-native lead intelligence and outreach pipeline.",
+      "description": "AI 驱动的潜在客户情报和外联管道。",
       "description_en": "AI-native lead intelligence and outreach pipeline.",
-      "description_ru": "AI-native lead intelligence and outreach pipeline.",
+      "description_ru": "AI-управляемый сбор информации о лидах и канал для аутрича.",
       "tags": [
+        "销售",
         "AI",
-        "Agent"
+        "外联"
       ],
       "tags_en": [
         "ai",
         "agent"
       ],
       "tags_ru": [
+        "продажи",
         "ИИ",
-        "Агент"
+        "коммуникация"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/lead-intelligence.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/lead-intelligence.md",
@@ -2522,17 +2682,21 @@
       "type": "skill",
       "name": "liquid-glass-design",
       "category": "前端开发",
-      "description": "iOS 26 Liquid Glass design system 鈥?dynamic glass material with blur, reflection, and interactive morphing for SwiftU...",
+      "description": "iOS 26 Liquid Glass 设计系统：动态玻璃材质、模糊、反射、交互运动。",
       "description_en": "iOS 26 Liquid Glass design system 鈥?dynamic glass material with blur, reflection, and interactive morphing for SwiftU...",
-      "description_ru": "iOS 26 Liquid Glass design system 鈥?dynamic glass material with blur, reflection, and interactive morphing for SwiftU...",
+      "description_ru": "Дизайн-система iOS 26 Liquid Glass: динамическое стекло с размытием, отражением и интерактивной анимацией.",
       "tags": [
-        "设计"
+        "iOS",
+        "设计",
+        "SwiftUI"
       ],
       "tags_en": [
         "design"
       ],
       "tags_ru": [
-        "дизайн"
+        "iOS",
+        "дизайн",
+        "SwiftUI"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/liquid-glass-design.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/liquid-glass-design.md",
@@ -2543,13 +2707,13 @@
       "type": "skill",
       "name": "llm-trading-agent-security",
       "category": "安全与合规",
-      "description": "Security patterns for autonomous trading agents with wallet or transaction authority.",
+      "description": "自主交易 Agent 安全模式：钱包和交易权限保护。",
       "description_en": "Security patterns for autonomous trading agents with wallet or transaction authority.",
-      "description_ru": "Security patterns for autonomous trading agents with wallet or transaction authority.",
+      "description_ru": "Паттерны безопасности для автономных торговых агентов с доступом к кошелькам и транзакциям.",
       "tags": [
-        "Agent",
         "安全",
-        "模式"
+        "交易",
+        "Agent"
       ],
       "tags_en": [
         "agent",
@@ -2557,9 +2721,9 @@
         "patterns"
       ],
       "tags_ru": [
-        "Агент",
         "безопасность",
-        "паттерны"
+        "трейдинг",
+        "Агент"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/llm-trading-agent-security.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/llm-trading-agent-security.md",
@@ -2570,17 +2734,21 @@
       "type": "skill",
       "name": "logistics-exception-management",
       "category": "业务运营",
-      "description": "Codified expertise for handling freight exceptions, shipment delays, damages, losses, and carrier disputes.",
+      "description": "物流异常管理：货运延迟、损坏、丢失、承运商争议处理。",
       "description_en": "Codified expertise for handling freight exceptions, shipment delays, damages, losses, and carrier disputes.",
-      "description_ru": "Codified expertise for handling freight exceptions, shipment delays, damages, losses, and carrier disputes.",
+      "description_ru": "Управление исключениями в логистике: задержки, повреждения, потери, споры с перевозчиками.",
       "tags": [
-        "工具"
+        "物流",
+        "运营",
+        "异常处理"
       ],
       "tags_en": [
         "tool"
       ],
       "tags_ru": [
-        "инструмент"
+        "логистика",
+        "операции",
+        "исключения"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/logistics-exception-management.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/logistics-exception-management.md",
@@ -2591,17 +2759,21 @@
       "type": "skill",
       "name": "manim-video",
       "category": "内容与设计",
-      "description": "Build reusable Manim explainers for technical concepts, graphs, system diagrams, and product walkthroughs, then hand ...",
+      "description": "构建可复用的 Manim 动画：技术概念讲解、图表、系统图、产品演示。",
       "description_en": "Build reusable Manim explainers for technical concepts, graphs, system diagrams, and product walkthroughs, then hand ...",
-      "description_ru": "Build reusable Manim explainers for technical concepts, graphs, system diagrams, and product walkthroughs, then hand ...",
+      "description_ru": "Создание переиспользуемых Manim-анимаций для объяснения технических концепций, диаграмм и демонстраций.",
       "tags": [
-        "AI"
+        "视频",
+        "动画",
+        "教育"
       ],
       "tags_en": [
         "ai"
       ],
       "tags_ru": [
-        "ИИ"
+        "видео",
+        "анимация",
+        "обучение"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/manim-video.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/manim-video.md",
@@ -2612,17 +2784,21 @@
       "type": "skill",
       "name": "market-research",
       "category": "内容与设计",
-      "description": "Conduct market research, competitive analysis, investor due diligence, and industry intelligence with source attribut...",
+      "description": "市场研究：竞争分析、投资人尽调、行业情报。",
       "description_en": "Conduct market research, competitive analysis, investor due diligence, and industry intelligence with source attribut...",
-      "description_ru": "Conduct market research, competitive analysis, investor due diligence, and industry intelligence with source attribut...",
+      "description_ru": "Исследование рынка: конкурентный анализ, due diligence инвесторов, отраслевая разведка.",
       "tags": [
-        "研究"
+        "研究",
+        "市场",
+        "商业"
       ],
       "tags_en": [
         "research"
       ],
       "tags_ru": [
-        "исследование"
+        "исследование",
+        "рынок",
+        "бизнес"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/market-research.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/market-research.md",
@@ -2633,14 +2809,13 @@
       "type": "skill",
       "name": "mcp-server-patterns",
       "category": "模式与规范",
-      "description": "Build MCP servers with Node/TypeScript SDK 鈥?tools, resources, prompts, Zod validation, stdio vs Streamable HTTP.",
+      "description": "MCP 服务器构建模式：Node/TypeScript SDK、工具/资源/提示、Zod 验证、stdio vs Streamable HTTP。",
       "description_en": "Build MCP servers with Node/TypeScript SDK 鈥?tools, resources, prompts, Zod validation, stdio vs Streamable HTTP.",
-      "description_ru": "Build MCP servers with Node/TypeScript SDK 鈥?tools, resources, prompts, Zod validation, stdio vs Streamable HTTP.",
+      "description_ru": "Паттерны создания MCP-серверов: Node/TypeScript SDK, инструменты/ресурсы/подсказки, Zod-валидация, stdio vs HTTP.",
       "tags": [
-        "API",
-        "文档",
+        "MCP",
         "模式",
-        "TypeScript"
+        "开发"
       ],
       "tags_en": [
         "api",
@@ -2649,10 +2824,9 @@
         "typescript"
       ],
       "tags_ru": [
-        "API",
-        "документация",
+        "MCP",
         "паттерны",
-        "TypeScript"
+        "разработка"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/mcp-server-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/mcp-server-patterns.md",
@@ -2663,17 +2837,21 @@
       "type": "skill",
       "name": "messages-ops",
       "category": "业务运营",
-      "description": "Evidence-first live messaging workflow for ECC.",
+      "description": "实时消息运营：证据优先的 ECC 消息工作流。",
       "description_en": "Evidence-first live messaging workflow for ECC.",
-      "description_ru": "Evidence-first live messaging workflow for ECC.",
+      "description_ru": "Управление живыми сообщениями: рабочий процесс на основе доказательств для ECC.",
       "tags": [
-        "代码"
+        "消息",
+        "运营",
+        "通信"
       ],
       "tags_en": [
         "code"
       ],
       "tags_ru": [
-        "код"
+        "сообщения",
+        "операции",
+        "связь"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/messages-ops.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/messages-ops.md",
@@ -2684,13 +2862,13 @@
       "type": "skill",
       "name": "nestjs-patterns",
       "category": "后端开发",
-      "description": "NestJS architecture patterns for modules, controllers, providers, DTO validation, guards, interceptors, config, and p...",
+      "description": "NestJS 架构模式：模块、控制器、Provider、DTO 验证、Guard、拦截器。",
       "description_en": "NestJS architecture patterns for modules, controllers, providers, DTO validation, guards, interceptors, config, and p...",
-      "description_ru": "NestJS architecture patterns for modules, controllers, providers, DTO validation, guards, interceptors, config, and p...",
+      "description_ru": "Архитектурные паттерны NestJS: модули, контроллеры, провайдеры, валидация DTO, guard, интерцепторы.",
       "tags": [
-        "后端",
-        "模式",
-        "TypeScript"
+        "NestJS",
+        "TypeScript",
+        "后端"
       ],
       "tags_en": [
         "backend",
@@ -2698,9 +2876,9 @@
         "typescript"
       ],
       "tags_ru": [
-        "бэкенд",
-        "паттерны",
-        "TypeScript"
+        "NestJS",
+        "TypeScript",
+        "бэкенд"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/nestjs-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/nestjs-patterns.md",
@@ -2711,20 +2889,22 @@
       "type": "skill",
       "name": "nodejs-keccak256",
       "category": "通用工具",
-      "description": "Prevent Ethereum hashing bugs in JavaScript and TypeScript.",
+      "description": "防止 JavaScript/TypeScript 中的以太坊哈希错误：Keccak256 正确实现。",
       "description_en": "Prevent Ethereum hashing bugs in JavaScript and TypeScript.",
-      "description_ru": "Prevent Ethereum hashing bugs in JavaScript and TypeScript.",
+      "description_ru": "Предотвращение ошибок хеширования Ethereum в JavaScript и TypeScript: правильная реализация Keccak256.",
       "tags": [
-        "Java",
-        "TypeScript"
+        "Ethereum",
+        "安全",
+        "Node.js"
       ],
       "tags_en": [
         "java",
         "typescript"
       ],
       "tags_ru": [
-        "Java",
-        "TypeScript"
+        "Ethereum",
+        "безопасность",
+        "Node.js"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/nodejs-keccak256.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/nodejs-keccak256.md",
@@ -2735,17 +2915,21 @@
       "type": "skill",
       "name": "nutrient-document-processing",
       "category": "API与集成",
-      "description": "Process, convert, OCR, extract, redact, sign, and fill documents using the Nutrient DWS API.",
+      "description": "文档处理：转换、OCR、提取、编辑、签名、填表，使用 Nutrient DWS API。",
       "description_en": "Process, convert, OCR, extract, redact, sign, and fill documents using the Nutrient DWS API.",
-      "description_ru": "Process, convert, OCR, extract, redact, sign, and fill documents using the Nutrient DWS API.",
+      "description_ru": "Обработка документов через Nutrient DWS API: конвертация, OCR, извлечение, редактирование, подпись, заполнение форм.",
       "tags": [
-        "API"
+        "文档",
+        "API",
+        "OCR"
       ],
       "tags_en": [
         "api"
       ],
       "tags_ru": [
-        "API"
+        "документы",
+        "API",
+        "OCR"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/nutrient-document-processing.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/nutrient-document-processing.md",
@@ -2756,20 +2940,22 @@
       "type": "skill",
       "name": "perl-patterns",
       "category": "移动与语言",
-      "description": "Modern Perl 5.",
+      "description": "现代 Perl 5 模式：惯用写法、最佳实践、健壮代码。",
       "description_en": "Modern Perl 5.",
-      "description_ru": "Modern Perl 5.",
+      "description_ru": "Паттерны современного Perl 5: идиоматический код, лучшие практики, надёжность.",
       "tags": [
-        "AI",
-        "模式"
+        "Perl",
+        "模式",
+        "最佳实践"
       ],
       "tags_en": [
         "ai",
         "patterns"
       ],
       "tags_ru": [
-        "ИИ",
-        "паттерны"
+        "Perl",
+        "паттерны",
+        "best practices"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/perl-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/perl-patterns.md",
@@ -2780,13 +2966,13 @@
       "type": "skill",
       "name": "perl-security",
       "category": "移动与语言",
-      "description": "Comprehensive Perl security covering taint mode, input validation, safe process execution, DBI parameterized queries,...",
+      "description": "Perl 安全：污点模式、输入验证、安全进程执行、DBI 参数化。",
       "description_en": "Comprehensive Perl security covering taint mode, input validation, safe process execution, DBI parameterized queries,...",
-      "description_ru": "Comprehensive Perl security covering taint mode, input validation, safe process execution, DBI parameterized queries,...",
+      "description_ru": "Безопасность Perl: режим taint, валидация ввода, безопасный запуск процессов, параметризация DBI.",
       "tags": [
-        "AI",
+        "Perl",
         "安全",
-        "Web"
+        "最佳实践"
       ],
       "tags_en": [
         "ai",
@@ -2794,9 +2980,9 @@
         "web"
       ],
       "tags_ru": [
-        "ИИ",
+        "Perl",
         "безопасность",
-        "веб"
+        "best practices"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/perl-security.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/perl-security.md",
@@ -2807,20 +2993,22 @@
       "type": "skill",
       "name": "perl-testing",
       "category": "移动与语言",
-      "description": "Perl testing patterns using Test2::V0, Test::More, prove runner, mocking, coverage with Devel::Cover, and TDD methodo...",
+      "description": "Perl 测试模式：Test2::V0、Test::More、prove 运行器、Mocking、Devel::Cover。",
       "description_en": "Perl testing patterns using Test2::V0, Test::More, prove runner, mocking, coverage with Devel::Cover, and TDD methodo...",
-      "description_ru": "Perl testing patterns using Test2::V0, Test::More, prove runner, mocking, coverage with Devel::Cover, and TDD methodo...",
+      "description_ru": "Паттерны тестирования Perl: Test2::V0, Test::More, prove, mocking, Devel::Cover.",
       "tags": [
+        "Perl",
         "测试",
-        "模式"
+        "质量"
       ],
       "tags_en": [
         "testing",
         "patterns"
       ],
       "tags_ru": [
+        "Perl",
         "тестирование",
-        "паттерны"
+        "качество"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/perl-testing.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/perl-testing.md",
@@ -2831,17 +3019,21 @@
       "type": "skill",
       "name": "plankton-code-quality",
       "category": "工作流与工具",
-      "description": "\"Write-time code quality enforcement using Plankton 鈥?auto-formatting, linting, and Claude-powered fixes on every fil...",
+      "description": "写时代码质量控制：自动格式化、Linting、AI 驱动的修复建议。",
       "description_en": "\"Write-time code quality enforcement using Plankton 鈥?auto-formatting, linting, and Claude-powered fixes on every fil...",
-      "description_ru": "\"Write-time code quality enforcement using Plankton 鈥?auto-formatting, linting, and Claude-powered fixes on every fil...",
+      "description_ru": "Контроль качества кода на этапе написания: автоформатирование, линтинг, AI-предложения по исправлению.",
       "tags": [
-        "代码"
+        "代码质量",
+        "Lint",
+        "自动化"
       ],
       "tags_en": [
         "code"
       ],
       "tags_ru": [
-        "код"
+        "качество кода",
+        "Lint",
+        "автоматизация"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/plankton-code-quality.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/plankton-code-quality.md",
@@ -2852,14 +3044,13 @@
       "type": "skill",
       "name": "postgres-patterns",
       "category": "后端开发",
-      "description": "PostgreSQL database patterns for query optimization, schema design, indexing, and security.",
+      "description": "PostgreSQL 数据库模式：查询优化、Schema 设计、索引策略、安全配置。",
       "description_en": "PostgreSQL database patterns for query optimization, schema design, indexing, and security.",
-      "description_ru": "PostgreSQL database patterns for query optimization, schema design, indexing, and security.",
+      "description_ru": "Паттерны PostgreSQL: оптимизация запросов, дизайн схемы, стратегии индексирования, безопасность.",
       "tags": [
-        "安全",
+        "PostgreSQL",
         "数据库",
-        "设计",
-        "数据"
+        "后端"
       ],
       "tags_en": [
         "security",
@@ -2868,10 +3059,9 @@
         "data"
       ],
       "tags_ru": [
-        "безопасность",
+        "PostgreSQL",
         "база данных",
-        "дизайн",
-        "данные"
+        "бэкенд"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/postgres-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/postgres-patterns.md",
@@ -2882,17 +3072,21 @@
       "type": "skill",
       "name": "product-capability",
       "category": "业务运营",
-      "description": "Translate PRD intent, roadmap asks, or product discussions into an implementation-ready capability plan that exposes ...",
+      "description": "将 PRD 意图、路线图需求转化为可执行的能力规格书。",
       "description_en": "Translate PRD intent, roadmap asks, or product discussions into an implementation-ready capability plan that exposes ...",
-      "description_ru": "Translate PRD intent, roadmap asks, or product discussions into an implementation-ready capability plan that exposes ...",
+      "description_ru": "Преобразование намерений PRD и дорожных карт в готовые к реализации спецификации возможностей.",
       "tags": [
-        "AI"
+        "产品",
+        "规划",
+        "PM"
       ],
       "tags_en": [
         "ai"
       ],
       "tags_ru": [
-        "ИИ"
+        "продукт",
+        "планирование",
+        "PM"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/product-capability.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/product-capability.md",
@@ -2903,17 +3097,21 @@
       "type": "skill",
       "name": "production-scheduling",
       "category": "业务运营",
-      "description": "Codified expertise for production scheduling, job sequencing, line balancing, changeover optimization, and bottleneck...",
+      "description": "生产排程：作业排序、产线平衡、换线优化。",
       "description_en": "Codified expertise for production scheduling, job sequencing, line balancing, changeover optimization, and bottleneck...",
-      "description_ru": "Codified expertise for production scheduling, job sequencing, line balancing, changeover optimization, and bottleneck...",
+      "description_ru": "Планирование производства: последовательность задач, балансировка линий, оптимизация переналадки.",
       "tags": [
-        "工具"
+        "制造",
+        "排程",
+        "优化"
       ],
       "tags_en": [
         "tool"
       ],
       "tags_ru": [
-        "инструмент"
+        "производство",
+        "планирование",
+        "оптимизация"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/production-scheduling.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/production-scheduling.md",
@@ -2924,20 +3122,22 @@
       "type": "skill",
       "name": "project-flow-ops",
       "category": "工作流与工具",
-      "description": "Operate execution flow across GitHub and Linear by triaging issues and pull requests, linking active work, and keepin...",
+      "description": "跨 GitHub 和 Linear 的执行流：Issue/PR 分类、关联、跟踪。",
       "description_en": "Operate execution flow across GitHub and Linear by triaging issues and pull requests, linking active work, and keepin...",
-      "description_ru": "Operate execution flow across GitHub and Linear by triaging issues and pull requests, linking active work, and keepin...",
+      "description_ru": "Управление потоком задач между GitHub и Linear: сортировка issues/PR, связывание, отслеживание.",
       "tags": [
-        "AI",
-        "Git"
+        "项目管理",
+        "GitHub",
+        "Linear"
       ],
       "tags_en": [
         "ai",
         "git"
       ],
       "tags_ru": [
-        "ИИ",
-        "Git"
+        "управление",
+        "GitHub",
+        "Linear"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/project-flow-ops.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/project-flow-ops.md",
@@ -2948,16 +3148,20 @@
       "type": "skill",
       "name": "prompt-optimizer",
       "category": "AI与Agent",
-      "description": "Analyze raw prompts, identify intent and gaps, match ECC components (skills/commands/agents/hooks), and output a read...",
+      "description": "分析原始提示词、识别意图和缺口、匹配 ECC 组件优化输出。",
       "description_en": "Analyze raw prompts, identify intent and gaps, match ECC components (skills/commands/agents/hooks), and output a read...",
-      "description_ru": "Analyze raw prompts, identify intent and gaps, match ECC components (skills/commands/agents/hooks), and output a read...",
+      "description_ru": "Анализ сырых промптов, выявление намерений и пробелов, подбор компонентов ECC для оптимизации.",
       "tags": [
+        "提示词",
+        "优化",
         "Agent"
       ],
       "tags_en": [
         "agent"
       ],
       "tags_ru": [
+        "промпт",
+        "оптимизация",
         "Агент"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/prompt-optimizer.md",
@@ -2969,13 +3173,13 @@
       "type": "skill",
       "name": "python-patterns",
       "category": "模式与规范",
-      "description": "Pythonic idioms, PEP 8 standards, type hints, and best practices for building robust, efficient, and maintainable Pyt...",
+      "description": "Python 惯用模式：PEP 8、类型提示、最佳实践。",
       "description_en": "Pythonic idioms, PEP 8 standards, type hints, and best practices for building robust, efficient, and maintainable Pyt...",
-      "description_ru": "Pythonic idioms, PEP 8 standards, type hints, and best practices for building robust, efficient, and maintainable Pyt...",
+      "description_ru": "Идиоматические паттерны Python: PEP 8, подсказки типов, лучшие практики.",
       "tags": [
-        "AI",
+        "Python",
         "模式",
-        "Python"
+        "最佳实践"
       ],
       "tags_en": [
         "ai",
@@ -2983,9 +3187,9 @@
         "python"
       ],
       "tags_ru": [
-        "ИИ",
+        "Python",
         "паттерны",
-        "Python"
+        "best practices"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/python-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/python-patterns.md",
@@ -2996,20 +3200,22 @@
       "type": "skill",
       "name": "python-testing",
       "category": "测试与质量",
-      "description": "Python testing strategies using pytest, TDD methodology, fixtures, mocking, parametrization, and coverage requirements.",
+      "description": "Python 测试策略：pytest、TDD、Fixtures、Mocking、参数化、覆盖率。",
       "description_en": "Python testing strategies using pytest, TDD methodology, fixtures, mocking, parametrization, and coverage requirements.",
-      "description_ru": "Python testing strategies using pytest, TDD methodology, fixtures, mocking, parametrization, and coverage requirements.",
+      "description_ru": "Стратегии тестирования Python: pytest, TDD, fixtures, mocking, параметризация, покрытие.",
       "tags": [
+        "Python",
         "测试",
-        "Python"
+        "TDD"
       ],
       "tags_en": [
         "testing",
         "python"
       ],
       "tags_ru": [
+        "Python",
         "тестирование",
-        "Python"
+        "TDD"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/python-testing.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/python-testing.md",
@@ -3020,17 +3226,21 @@
       "type": "skill",
       "name": "quality-nonconformance",
       "category": "业务运营",
-      "description": "Codified expertise for quality control, non-conformance investigation, root cause analysis, corrective action, and su...",
+      "description": "质量控制：不合格品调查、根因分析、纠正措施。",
       "description_en": "Codified expertise for quality control, non-conformance investigation, root cause analysis, corrective action, and su...",
-      "description_ru": "Codified expertise for quality control, non-conformance investigation, root cause analysis, corrective action, and su...",
+      "description_ru": "Контроль качества: расследование несоответствий, анализ корневых причин, корректирующие действия.",
       "tags": [
-        "工具"
+        "质量",
+        "制造",
+        "流程"
       ],
       "tags_en": [
         "tool"
       ],
       "tags_ru": [
-        "инструмент"
+        "качество",
+        "производство",
+        "процесс"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/quality-nonconformance.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/quality-nonconformance.md",
@@ -3041,17 +3251,21 @@
       "type": "skill",
       "name": "ralphinho-rfc-pipeline",
       "category": "工作流与工具",
-      "description": "RFC-driven multi-agent DAG execution pattern with quality gates, merge queues, and work unit orchestration.",
+      "description": "RFC 驱动的多 Agent DAG 执行模式：质量门、合并队列、工作单元编排。",
       "description_en": "RFC-driven multi-agent DAG execution pattern with quality gates, merge queues, and work unit orchestration.",
-      "description_ru": "RFC-driven multi-agent DAG execution pattern with quality gates, merge queues, and work unit orchestration.",
+      "description_ru": "Управляемый RFC многокомпонентный DAG-пайплайн с контролем качества и оркестрацией рабочих единиц.",
       "tags": [
-        "Agent"
+        "RFC",
+        "Agent",
+        "流程"
       ],
       "tags_en": [
         "agent"
       ],
       "tags_ru": [
-        "Агент"
+        "RFC",
+        "Агент",
+        "процесс"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/ralphinho-rfc-pipeline.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/ralphinho-rfc-pipeline.md",
@@ -3062,17 +3276,21 @@
       "type": "skill",
       "name": "regex-vs-llm-structured-text",
       "category": "数据与研究",
-      "description": "Decision framework for choosing between regex and LLM when parsing structured text 鈥?start with regex, add LLM only f...",
+      "description": "Regex vs LLM 决策框架：结构化文本解析时优先用 Regex，复杂情况用 LLM。",
       "description_en": "Decision framework for choosing between regex and LLM when parsing structured text 鈥?start with regex, add LLM only f...",
-      "description_ru": "Decision framework for choosing between regex and LLM when parsing structured text 鈥?start with regex, add LLM only f...",
+      "description_ru": "Система принятия решений Regex vs LLM: начинать с regex для структурированного текста, использовать LLM для сложных случаев.",
       "tags": [
-        "工具"
+        "Regex",
+        "LLM",
+        "解析"
       ],
       "tags_en": [
         "tool"
       ],
       "tags_ru": [
-        "инструмент"
+        "Regex",
+        "LLM",
+        "парсинг"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/regex-vs-llm-structured-text.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/regex-vs-llm-structured-text.md",
@@ -3083,17 +3301,21 @@
       "type": "skill",
       "name": "remotion-video-creation",
       "category": "内容与设计",
-      "description": "Best practices for Remotion - Video creation in React.",
+      "description": "Remotion 视频创建最佳实践：React 驱动视频渲染。",
       "description_en": "Best practices for Remotion - Video creation in React.",
-      "description_ru": "Best practices for Remotion - Video creation in React.",
+      "description_ru": "Лучшие практики создания видео с Remotion: рендеринг видео на основе React.",
       "tags": [
-        "AI"
+        "视频",
+        "React",
+        "动画"
       ],
       "tags_en": [
         "ai"
       ],
       "tags_ru": [
-        "ИИ"
+        "видео",
+        "React",
+        "анимация"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/remotion-video-creation.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/remotion-video-creation.md",
@@ -3104,17 +3326,21 @@
       "type": "skill",
       "name": "research-ops",
       "category": "数据与研究",
-      "description": "Evidence-first current-state research workflow for ECC.",
+      "description": "证据优先的现状研究工作流：搜索、验证、整理。",
       "description_en": "Evidence-first current-state research workflow for ECC.",
-      "description_ru": "Evidence-first current-state research workflow for ECC.",
+      "description_ru": "Рабочий процесс исследования текущего состояния на основе доказательств: поиск, проверка, систематизация.",
       "tags": [
-        "研究"
+        "研究",
+        "数据",
+        "ECC"
       ],
       "tags_en": [
         "research"
       ],
       "tags_ru": [
-        "исследование"
+        "исследование",
+        "данные",
+        "ECC"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/research-ops.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/research-ops.md",
@@ -3125,17 +3351,21 @@
       "type": "skill",
       "name": "returns-reverse-logistics",
       "category": "业务运营",
-      "description": "Codified expertise for returns authorization, receipt and inspection, disposition decisions, refund processing, fraud...",
+      "description": "逆向物流：退货授权、验收检查、处置决策、退款处理。",
       "description_en": "Codified expertise for returns authorization, receipt and inspection, disposition decisions, refund processing, fraud...",
-      "description_ru": "Codified expertise for returns authorization, receipt and inspection, disposition decisions, refund processing, fraud...",
+      "description_ru": "Обратная логистика: авторизация возвратов, приёмка и осмотр, решения по утилизации, обработка возвратов средств.",
       "tags": [
-        "AI"
+        "物流",
+        "退货",
+        "运营"
       ],
       "tags_en": [
         "ai"
       ],
       "tags_ru": [
-        "ИИ"
+        "логистика",
+        "возвраты",
+        "операции"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/returns-reverse-logistics.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/returns-reverse-logistics.md",
@@ -3146,13 +3376,13 @@
       "type": "skill",
       "name": "rust-patterns",
       "category": "后端开发",
-      "description": "Idiomatic Rust patterns, ownership, error handling, traits, concurrency, and best practices for building safe, perfor...",
+      "description": "Rust 惯用模式：所有权、错误处理、Trait、并发最佳实践。",
       "description_en": "Idiomatic Rust patterns, ownership, error handling, traits, concurrency, and best practices for building safe, perfor...",
-      "description_ru": "Idiomatic Rust patterns, ownership, error handling, traits, concurrency, and best practices for building safe, perfor...",
+      "description_ru": "Идиоматические паттерны Rust: владение, обработка ошибок, типажи, конкурентность.",
       "tags": [
-        "AI",
+        "Rust",
         "模式",
-        "Rust"
+        "系统编程"
       ],
       "tags_en": [
         "ai",
@@ -3160,9 +3390,9 @@
         "rust"
       ],
       "tags_ru": [
-        "ИИ",
+        "Rust",
         "паттерны",
-        "Rust"
+        "системное"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/rust-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/rust-patterns.md",
@@ -3173,13 +3403,13 @@
       "type": "skill",
       "name": "rust-testing",
       "category": "后端开发",
-      "description": "Rust testing patterns including unit tests, integration tests, async testing, property-based testing, mocking, and co...",
+      "description": "Rust 测试模式：单元测试、集成测试、异步测试、属性测试、覆盖率。",
       "description_en": "Rust testing patterns including unit tests, integration tests, async testing, property-based testing, mocking, and co...",
-      "description_ru": "Rust testing patterns including unit tests, integration tests, async testing, property-based testing, mocking, and co...",
+      "description_ru": "Паттерны тестирования Rust: модульные тесты, интеграционные тесты, асинхронное тестирование, property-based, покрытие.",
       "tags": [
+        "Rust",
         "测试",
-        "模式",
-        "Rust"
+        "质量"
       ],
       "tags_en": [
         "testing",
@@ -3187,9 +3417,9 @@
         "rust"
       ],
       "tags_ru": [
+        "Rust",
         "тестирование",
-        "паттерны",
-        "Rust"
+        "качество"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/rust-testing.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/rust-testing.md",
@@ -3200,14 +3430,13 @@
       "type": "skill",
       "name": "search-first",
       "category": "数据与研究",
-      "description": "Research-before-coding workflow.",
+      "description": "先研究后编码工作流：搜索现有方案再动手开发。",
       "description_en": "Research-before-coding workflow.",
-      "description_ru": "Research-before-coding workflow.",
+      "description_ru": "Рабочий процесс 'сначала исследуй': поиск существующих решений перед написанием кода.",
       "tags": [
-        "Agent",
         "研究",
-        "代码",
-        "模式"
+        "搜索",
+        "方法论"
       ],
       "tags_en": [
         "agent",
@@ -3216,10 +3445,9 @@
         "patterns"
       ],
       "tags_ru": [
-        "Агент",
         "исследование",
-        "код",
-        "паттерны"
+        "поиск",
+        "методология"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/search-first.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/search-first.md",
@@ -3230,17 +3458,21 @@
       "type": "skill",
       "name": "security-bounty-hunter",
       "category": "安全与合规",
-      "description": "Hunt for exploitable, bounty-worthy security issues in repositories.",
+      "description": "安全漏洞猎捕：在仓库中寻找可利用的、值得悬赏的安全问题。",
       "description_en": "Hunt for exploitable, bounty-worthy security issues in repositories.",
-      "description_ru": "Hunt for exploitable, bounty-worthy security issues in repositories.",
+      "description_ru": "Охота за уязвимостями: поиск эксплуатируемых проблем безопасности, достойных вознаграждения.",
       "tags": [
-        "安全"
+        "安全",
+        "漏洞",
+        "审计"
       ],
       "tags_en": [
         "security"
       ],
       "tags_ru": [
-        "безопасность"
+        "безопасность",
+        "уязвимости",
+        "аудит"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/security-bounty-hunter.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/security-bounty-hunter.md",
@@ -3251,12 +3483,13 @@
       "type": "skill",
       "name": "security-review",
       "category": "安全与合规",
-      "description": "Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or impl...",
+      "description": "安全审查：添加认证、处理用户输入、管理密钥、创建 API 端点时的安全检查。",
       "description_en": "Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or impl...",
-      "description_ru": "Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or impl...",
+      "description_ru": "Обзор безопасности при добавлении аутентификации, обработке ввода, работе с секретами, создании API.",
       "tags": [
         "安全",
-        "API"
+        "审查",
+        "开发"
       ],
       "tags_en": [
         "security",
@@ -3264,7 +3497,8 @@
       ],
       "tags_ru": [
         "безопасность",
-        "API"
+        "ревью",
+        "разработка"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/security-review.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/security-review.md",
@@ -3275,13 +3509,13 @@
       "type": "skill",
       "name": "security-scan",
       "category": "安全与合规",
-      "description": "Scan your Claude Code configuration (.",
+      "description": "扫描 Claude Code 配置中的安全漏洞：Skills、MCP、Hooks 安全检查。",
       "description_en": "Scan your Claude Code configuration (.",
-      "description_ru": "Scan your Claude Code configuration (.",
+      "description_ru": "Сканирование конфигурации Claude Code на уязвимости: проверка навыков, MCP, хуков.",
       "tags": [
-        "Agent",
         "安全",
-        "代码"
+        "扫描",
+        "配置"
       ],
       "tags_en": [
         "agent",
@@ -3289,9 +3523,9 @@
         "code"
       ],
       "tags_ru": [
-        "Агент",
         "безопасность",
-        "код"
+        "сканирование",
+        "конфигурация"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/security-scan.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/security-scan.md",
@@ -3302,20 +3536,22 @@
       "type": "skill",
       "name": "seo",
       "category": "内容与设计",
-      "description": "Audit, plan, and implement SEO improvements across technical SEO, on-page optimization, structured data, Core Web Vit...",
+      "description": "SEO 审计与优化：技术 SEO、页面优化、结构化数据、内容策略。",
       "description_en": "Audit, plan, and implement SEO improvements across technical SEO, on-page optimization, structured data, Core Web Vit...",
-      "description_ru": "Audit, plan, and implement SEO improvements across technical SEO, on-page optimization, structured data, Core Web Vit...",
+      "description_ru": "Аудит и оптимизация SEO: техническое SEO, оптимизация страниц, структурированные данные, стратегия контента.",
       "tags": [
-        "Web",
-        "数据"
+        "SEO",
+        "营销",
+        "内容"
       ],
       "tags_en": [
         "web",
         "data"
       ],
       "tags_ru": [
-        "веб",
-        "данные"
+        "SEO",
+        "маркетинг",
+        "контент"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/seo.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/seo.md",
@@ -3326,20 +3562,22 @@
       "type": "skill",
       "name": "skill-stocktake",
       "category": "工作流与工具",
-      "description": "\"Use when auditing Claude skills and commands for quality.",
+      "description": "Skills 和 Commands 质量审计：以用户视角盘点、评分、改进建议。",
       "description_en": "\"Use when auditing Claude skills and commands for quality.",
-      "description_ru": "\"Use when auditing Claude skills and commands for quality.",
+      "description_ru": "Аудит качества навыков и команд: инвентаризация, оценка и рекомендации по улучшению.",
       "tags": [
-        "Agent",
-        "subagent"
+        "审计",
+        "Skill",
+        "质量"
       ],
       "tags_en": [
         "agent",
         "subagent"
       ],
       "tags_ru": [
-        "Агент",
-        "subagent"
+        "аудит",
+        "Skill",
+        "качество"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/skill-stocktake.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/skill-stocktake.md",
@@ -3350,17 +3588,21 @@
       "type": "skill",
       "name": "social-graph-ranker",
       "category": "内容与设计",
-      "description": "Weighted social-graph ranking for warm intro discovery, bridge scoring, and network gap analysis across X and LinkedIn.",
+      "description": "社交图谱加权排序：暖介绍发现、桥接评分、网络缺口分析。",
       "description_en": "Weighted social-graph ranking for warm intro discovery, bridge scoring, and network gap analysis across X and LinkedIn.",
-      "description_ru": "Weighted social-graph ranking for warm intro discovery, bridge scoring, and network gap analysis across X and LinkedIn.",
+      "description_ru": "Ранжирование социального графа: поиск тёплых знакомств, оценка мостов, анализ пробелов в сети.",
       "tags": [
-        "工具"
+        "社交",
+        "网络",
+        "分析"
       ],
       "tags_en": [
         "tool"
       ],
       "tags_ru": [
-        "инструмент"
+        "соцсеть",
+        "граф",
+        "анализ"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/social-graph-ranker.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/social-graph-ranker.md",
@@ -3371,14 +3613,13 @@
       "type": "skill",
       "name": "springboot-patterns",
       "category": "后端开发",
-      "description": "Spring Boot architecture patterns, REST API design, layered services, data access, caching, async processing, and log...",
+      "description": "Spring Boot 架构模式：REST API、分层服务、数据访问、缓存、异步处理。",
       "description_en": "Spring Boot architecture patterns, REST API design, layered services, data access, caching, async processing, and log...",
-      "description_ru": "Spring Boot architecture patterns, REST API design, layered services, data access, caching, async processing, and log...",
+      "description_ru": "Архитектурные паттерны Spring Boot: REST API, слоистые сервисы, доступ к данным, кэширование, асинхронность.",
       "tags": [
-        "后端",
-        "API",
-        "设计",
-        "数据"
+        "Spring",
+        "Java",
+        "后端"
       ],
       "tags_en": [
         "backend",
@@ -3387,10 +3628,9 @@
         "data"
       ],
       "tags_ru": [
-        "бэкенд",
-        "API",
-        "дизайн",
-        "данные"
+        "Spring",
+        "Java",
+        "бэкенд"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/springboot-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/springboot-patterns.md",
@@ -3401,13 +3641,13 @@
       "type": "skill",
       "name": "springboot-security",
       "category": "后端开发",
-      "description": "Spring Security best practices for authn/authz, validation, CSRF, secrets, headers, rate limiting, and dependency sec...",
+      "description": "Spring Security 最佳实践：认证、授权、CSRF、密钥管理、限流。",
       "description_en": "Spring Security best practices for authn/authz, validation, CSRF, secrets, headers, rate limiting, and dependency sec...",
-      "description_ru": "Spring Security best practices for authn/authz, validation, CSRF, secrets, headers, rate limiting, and dependency sec...",
+      "description_ru": "Лучшие практики Spring Security: аутентификация, авторизация, CSRF, секреты, ограничение速率.",
       "tags": [
+        "Spring",
         "安全",
-        "Java",
-        "Spring"
+        "Java"
       ],
       "tags_en": [
         "security",
@@ -3415,9 +3655,9 @@
         "spring"
       ],
       "tags_ru": [
+        "Spring",
         "безопасность",
-        "Java",
-        "Spring"
+        "Java"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/springboot-security.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/springboot-security.md",
@@ -3428,20 +3668,22 @@
       "type": "skill",
       "name": "springboot-tdd",
       "category": "后端开发",
-      "description": "Test-driven development for Spring Boot using JUnit 5, Mockito, MockMvc, Testcontainers, and JaCoCo.",
+      "description": "Spring Boot TDD：JUnit 5、Mockito、MockMvc、Testcontainers、JaCoCo。",
       "description_en": "Test-driven development for Spring Boot using JUnit 5, Mockito, MockMvc, Testcontainers, and JaCoCo.",
-      "description_ru": "Test-driven development for Spring Boot using JUnit 5, Mockito, MockMvc, Testcontainers, and JaCoCo.",
+      "description_ru": "TDD для Spring Boot: JUnit 5, Mockito, MockMvc, Testcontainers, JaCoCo.",
       "tags": [
-        "AI",
-        "Spring"
+        "Spring",
+        "测试",
+        "TDD"
       ],
       "tags_en": [
         "ai",
         "spring"
       ],
       "tags_ru": [
-        "ИИ",
-        "Spring"
+        "Spring",
+        "тестирование",
+        "TDD"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/springboot-tdd.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/springboot-tdd.md",
@@ -3452,20 +3694,22 @@
       "type": "skill",
       "name": "springboot-verification",
       "category": "后端开发",
-      "description": "\"Verification loop for Spring Boot projects: build, static analysis, tests with coverage, security scans, and diff re...",
+      "description": "Spring Boot 验证循环：构建、静态分析、测试覆盖率、安全扫描。",
       "description_en": "\"Verification loop for Spring Boot projects: build, static analysis, tests with coverage, security scans, and diff re...",
-      "description_ru": "\"Verification loop for Spring Boot projects: build, static analysis, tests with coverage, security scans, and diff re...",
+      "description_ru": "Цикл верификации Spring Boot: сборка, статический анализ, тесты с покрытием, сканирование безопасности.",
       "tags": [
-        "安全",
-        "Spring"
+        "Spring",
+        "验证",
+        "CI"
       ],
       "tags_en": [
         "security",
         "spring"
       ],
       "tags_ru": [
-        "безопасность",
-        "Spring"
+        "Spring",
+        "верификация",
+        "CI"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/springboot-verification.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/springboot-verification.md",
@@ -3476,16 +3720,20 @@
       "type": "skill",
       "name": "strategic-compact",
       "category": "工作流与工具",
-      "description": "Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary...",
+      "description": "在逻辑间隔点建议手动上下文压缩，保持跨阶段任务的上下文连续性。",
       "description_en": "Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary...",
-      "description_ru": "Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary...",
+      "description_ru": "Предложение ручного сжатия контекста на логических интервалах для сохранения непрерывности между фазами задачи.",
       "tags": [
+        "上下文",
+        "优化",
         "工具"
       ],
       "tags_en": [
         "tool"
       ],
       "tags_ru": [
+        "контекст",
+        "оптимизация",
         "инструмент"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/strategic-compact.md",
@@ -3497,20 +3745,22 @@
       "type": "skill",
       "name": "swift-actor-persistence",
       "category": "移动与语言",
-      "description": "Thread-safe data persistence in Swift using actors 鈥?in-memory cache with file-backed storage, eliminating data races...",
+      "description": "Swift Actor 线程安全数据持久化：内存缓存 + 文件后备存储，消除数据竞争。",
       "description_en": "Thread-safe data persistence in Swift using actors 鈥?in-memory cache with file-backed storage, eliminating data races...",
-      "description_ru": "Thread-safe data persistence in Swift using actors 鈥?in-memory cache with file-backed storage, eliminating data races...",
+      "description_ru": "Потокобезопасное хранение данных в Swift с использованием actors: кэш в памяти с файловым хранилищем.",
       "tags": [
-        "设计",
-        "数据"
+        "Swift",
+        "并发",
+        "iOS"
       ],
       "tags_en": [
         "design",
         "data"
       ],
       "tags_ru": [
-        "дизайн",
-        "данные"
+        "Swift",
+        "конкурентность",
+        "iOS"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/swift-actor-persistence.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/swift-actor-persistence.md",
@@ -3521,17 +3771,21 @@
       "type": "skill",
       "name": "swift-concurrency-6-2",
       "category": "移动与语言",
-      "description": "Swift 6.2 Approachable Concurrency 鈥?single-threaded by default, @concurrent for explicit background offloading, isolate",
+      "description": "Swift 6.2 可接近并发：默认单线程、@concurrent 显式后台、结构化任务。",
       "description_en": "Swift 6.2 Approachable Concurrency 鈥?single-threaded by default, @concurrent for explicit background offloading, isolate",
-      "description_ru": "Swift 6.2 Approachable Concurrency 鈥?single-threaded by default, @concurrent for explicit background offloading, isolate",
+      "description_ru": "Swift 6.2 Approachable Concurrency: однопоточность по умолчанию, @concurrent для фона, структурированные задачи.",
       "tags": [
-        "AI"
+        "Swift",
+        "并发",
+        "iOS"
       ],
       "tags_en": [
         "ai"
       ],
       "tags_ru": [
-        "ИИ"
+        "Swift",
+        "конкурентность",
+        "iOS"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/swift-concurrency-6-2.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/swift-concurrency-6-2.md",
@@ -3542,13 +3796,13 @@
       "type": "skill",
       "name": "swift-protocol-di-testing",
       "category": "移动与语言",
-      "description": "Protocol-based dependency injection for testable Swift code 鈥?mock file system, network, and external APIs using focu...",
+      "description": "基于 Protocol 的依赖注入：Mock 文件系统、网络、外部服务，实现可测试 Swift 代码。",
       "description_en": "Protocol-based dependency injection for testable Swift code 鈥?mock file system, network, and external APIs using focu...",
-      "description_ru": "Protocol-based dependency injection for testable Swift code 鈥?mock file system, network, and external APIs using focu...",
+      "description_ru": "Внедрение зависимостей на основе протоколов для тестируемого кода Swift: мок-файловая система, сеть, внешние сервисы.",
       "tags": [
+        "Swift",
         "测试",
-        "API",
-        "代码"
+        "DI"
       ],
       "tags_en": [
         "testing",
@@ -3556,9 +3810,9 @@
         "code"
       ],
       "tags_ru": [
+        "Swift",
         "тестирование",
-        "API",
-        "код"
+        "DI"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/swift-protocol-di-testing.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/swift-protocol-di-testing.md",
@@ -3569,17 +3823,21 @@
       "type": "skill",
       "name": "swiftui-patterns",
       "category": "前端开发",
-      "description": "SwiftUI architecture patterns, state management with @Observable, view composition, navigation, performance optimizat...",
+      "description": "SwiftUI 架构模式：@Observable 状态管理、视图组合、导航、性能、测试。",
       "description_en": "SwiftUI architecture patterns, state management with @Observable, view composition, navigation, performance optimizat...",
-      "description_ru": "SwiftUI architecture patterns, state management with @Observable, view composition, navigation, performance optimizat...",
+      "description_ru": "Архитектурные паттерны SwiftUI: управление состоянием через @Observable, композиция представлений, навигация.",
       "tags": [
-        "模式"
+        "SwiftUI",
+        "iOS",
+        "前端"
       ],
       "tags_en": [
         "patterns"
       ],
       "tags_ru": [
-        "паттерны"
+        "SwiftUI",
+        "iOS",
+        "фронтенд"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/swiftui-patterns.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/swiftui-patterns.md",
@@ -3590,17 +3848,21 @@
       "type": "skill",
       "name": "tdd-workflow",
       "category": "测试与质量",
-      "description": "Use this skill when writing new features, fixing bugs, or refactoring code.",
+      "description": "TDD 工作流：编写新功能、修复 Bug、重构代码时的标准流程。",
       "description_en": "Use this skill when writing new features, fixing bugs, or refactoring code.",
-      "description_ru": "Use this skill when writing new features, fixing bugs, or refactoring code.",
+      "description_ru": "Рабочий процесс TDD при написании новых функций, исправлении ошибок и рефакторинге кода.",
       "tags": [
-        "代码"
+        "TDD",
+        "测试",
+        "开发"
       ],
       "tags_en": [
         "code"
       ],
       "tags_ru": [
-        "код"
+        "TDD",
+        "тестирование",
+        "разработка"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/tdd-workflow.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/tdd-workflow.md",
@@ -3611,17 +3873,21 @@
       "type": "skill",
       "name": "team-builder",
       "category": "工作流与工具",
-      "description": "Interactive agent picker for composing and dispatching parallel teams.",
+      "description": "交互式 Agent 选择器：组合和调度并行团队。",
       "description_en": "Interactive agent picker for composing and dispatching parallel teams.",
-      "description_ru": "Interactive agent picker for composing and dispatching parallel teams.",
+      "description_ru": "Интерактивный подбор агентов для создания и распределения параллельных команд.",
       "tags": [
-        "Agent"
+        "Agent",
+        "协作",
+        "工具"
       ],
       "tags_en": [
         "agent"
       ],
       "tags_ru": [
-        "Агент"
+        "Агент",
+        "сотрудничество",
+        "инструмент"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/team-builder.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/team-builder.md",
@@ -3632,17 +3898,21 @@
       "type": "skill",
       "name": "terminal-ops",
       "category": "文件与系统",
-      "description": "Evidence-first repo execution workflow for ECC.",
+      "description": "终端运营：证据优先的仓库执行工作流。",
       "description_en": "Evidence-first repo execution workflow for ECC.",
-      "description_ru": "Evidence-first repo execution workflow for ECC.",
+      "description_ru": "Терминальные операции: рабочий процесс выполнения в репозитории на основе доказательств.",
       "tags": [
-        "AI"
+        "终端",
+        "CLI",
+        "工具"
       ],
       "tags_en": [
         "ai"
       ],
       "tags_ru": [
-        "ИИ"
+        "терминал",
+        "CLI",
+        "инструмент"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/terminal-ops.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/terminal-ops.md",
@@ -3653,17 +3923,21 @@
       "type": "skill",
       "name": "token-budget-advisor",
       "category": "AI与Agent",
-      "description": "Offers the user an informed choice about how much response depth to consume before answering.",
+      "description": "在回答前向用户提供响应深度选择，优化 Token 消耗。",
       "description_en": "Offers the user an informed choice about how much response depth to consume before answering.",
-      "description_ru": "Offers the user an informed choice about how much response depth to consume before answering.",
+      "description_ru": "Предложение пользователю выбора глубины ответа перед генерацией для оптимизации расхода токенов.",
       "tags": [
-        "工具"
+        "Token",
+        "成本",
+        "优化"
       ],
       "tags_en": [
         "tool"
       ],
       "tags_ru": [
-        "инструмент"
+        "токены",
+        "стоимость",
+        "оптимизация"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/token-budget-advisor.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/token-budget-advisor.md",
@@ -3674,17 +3948,21 @@
       "type": "skill",
       "name": "ui-demo",
       "category": "前端开发",
-      "description": "Record polished UI demo videos using Playwright.",
+      "description": "使用 Playwright 录制精美的 UI 演示视频。",
       "description_en": "Record polished UI demo videos using Playwright.",
-      "description_ru": "Record polished UI demo videos using Playwright.",
+      "description_ru": "Запись качественных демо-видео интерфейсов с использованием Playwright.",
       "tags": [
-        "Web"
+        "UI",
+        "视频",
+        "Playwright"
       ],
       "tags_en": [
         "web"
       ],
       "tags_ru": [
-        "веб"
+        "UI",
+        "видео",
+        "Playwright"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/ui-demo.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/ui-demo.md",
@@ -3695,17 +3973,21 @@
       "type": "skill",
       "name": "unified-notifications-ops",
       "category": "业务运营",
-      "description": "Operate notifications as one ECC-native workflow across GitHub, Linear, desktop alerts, hooks, and connected communic...",
+      "description": "统一通知运营：跨 GitHub、Linear、桌面提醒、Hooks 的一体化通知工作流。",
       "description_en": "Operate notifications as one ECC-native workflow across GitHub, Linear, desktop alerts, hooks, and connected communic...",
-      "description_ru": "Operate notifications as one ECC-native workflow across GitHub, Linear, desktop alerts, hooks, and connected communic...",
+      "description_ru": "Единый рабочий процесс уведомлений через GitHub, Linear, десктоп-оповещения, хуки и каналы.",
       "tags": [
-        "Git"
+        "通知",
+        "运营",
+        "集成"
       ],
       "tags_en": [
         "git"
       ],
       "tags_ru": [
-        "Git"
+        "уведомления",
+        "операции",
+        "интеграция"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/unified-notifications-ops.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/unified-notifications-ops.md",
@@ -3716,17 +3998,21 @@
       "type": "skill",
       "name": "verification-loop",
       "category": "测试与质量",
-      "description": "\"A comprehensive verification system for Claude Code sessions.",
+      "description": "Claude Code 会话的综合验证系统：构建、测试、Lint、安全扫描一站式。",
       "description_en": "\"A comprehensive verification system for Claude Code sessions.",
-      "description_ru": "\"A comprehensive verification system for Claude Code sessions.",
+      "description_ru": "Комплексная система верификации сессий: сборка, тесты, линтинг, сканирование безопасности.",
       "tags": [
-        "代码"
+        "验证",
+        "CI",
+        "质量"
       ],
       "tags_en": [
         "code"
       ],
       "tags_ru": [
-        "код"
+        "верификация",
+        "CI",
+        "качество"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/verification-loop.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/verification-loop.md",
@@ -3737,17 +4023,21 @@
       "type": "skill",
       "name": "video-editing",
       "category": "内容与设计",
-      "description": "AI-assisted video editing workflows for cutting, structuring, and augmenting real footage.",
+      "description": "AI 辅助视频编辑：剪辑、结构化、增强真实素材。",
       "description_en": "AI-assisted video editing workflows for cutting, structuring, and augmenting real footage.",
-      "description_ru": "AI-assisted video editing workflows for cutting, structuring, and augmenting real footage.",
+      "description_ru": "Редактирование видео с помощью AI: нарезка, структурирование, улучшение реальных материалов.",
       "tags": [
-        "AI"
+        "视频",
+        "AI",
+        "编辑"
       ],
       "tags_en": [
         "ai"
       ],
       "tags_ru": [
-        "ИИ"
+        "видео",
+        "ИИ",
+        "редактирование"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/video-editing.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/video-editing.md",
@@ -3758,17 +4048,21 @@
       "type": "skill",
       "name": "videodb",
       "category": "API与集成",
-      "description": "See, Understand, Act on video and audio.",
+      "description": "视频和音频的查看、理解、操作一体化工具。",
       "description_en": "See, Understand, Act on video and audio.",
-      "description_ru": "See, Understand, Act on video and audio.",
+      "description_ru": "Инструмент для просмотра, понимания и работы с видео и аудио.",
       "tags": [
-        "工具"
+        "视频",
+        "API",
+        "AI"
       ],
       "tags_en": [
         "tool"
       ],
       "tags_ru": [
-        "инструмент"
+        "видео",
+        "API",
+        "ИИ"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/videodb.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/videodb.md",
@@ -3779,16 +4073,20 @@
       "type": "skill",
       "name": "visa-doc-translate",
       "category": "通用工具",
-      "description": "Translate visa application documents (images) to English and create a bilingual PDF with original and translation.",
+      "description": "签证申请文件翻译：图片→英文→双语 PDF。",
       "description_en": "Translate visa application documents (images) to English and create a bilingual PDF with original and translation.",
-      "description_ru": "Translate visa application documents (images) to English and create a bilingual PDF with original and translation.",
+      "description_ru": "Перевод визовых документов: изображения -> английский -> двуязычный PDF.",
       "tags": [
+        "翻译",
+        "文档",
         "工具"
       ],
       "tags_en": [
         "tool"
       ],
       "tags_ru": [
+        "перевод",
+        "документы",
         "инструмент"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/visa-doc-translate.md",
@@ -3800,17 +4098,21 @@
       "type": "skill",
       "name": "workspace-surface-audit",
       "category": "工作流与工具",
-      "description": "Audit the active repo, MCP servers, plugins, connectors, env surfaces, and harness setup, then recommend the highest-...",
+      "description": "审计活跃仓库、MCP 服务器、插件、连接器、环境表面，提出改进建议。",
       "description_en": "Audit the active repo, MCP servers, plugins, connectors, env surfaces, and harness setup, then recommend the highest-...",
-      "description_ru": "Audit the active repo, MCP servers, plugins, connectors, env surfaces, and harness setup, then recommend the highest-...",
+      "description_ru": "Аудит активного репозитория, MCP-серверов, плагинов, коннекторов, окружения с рекомендациями по улучшению.",
       "tags": [
-        "Agent"
+        "审计",
+        "工作区",
+        "工具"
       ],
       "tags_en": [
         "agent"
       ],
       "tags_ru": [
-        "Агент"
+        "аудит",
+        "рабочее пространство",
+        "инструмент"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/workspace-surface-audit.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/workspace-surface-audit.md",
@@ -3821,20 +4123,22 @@
       "type": "skill",
       "name": "x-api",
       "category": "API与集成",
-      "description": "X/Twitter API integration for posting tweets, threads, reading timelines, search, and analytics.",
+      "description": "X/Twitter API 集成：发帖、发线程、读时间线、搜索、分析。",
       "description_en": "X/Twitter API integration for posting tweets, threads, reading timelines, search, and analytics.",
-      "description_ru": "X/Twitter API integration for posting tweets, threads, reading timelines, search, and analytics.",
+      "description_ru": "Интеграция с X/Twitter API: публикация твитов и тредов, чтение ленты, поиск, аналитика.",
       "tags": [
+        "Twitter",
         "API",
-        "模式"
+        "社交媒体"
       ],
       "tags_en": [
         "api",
         "patterns"
       ],
       "tags_ru": [
+        "Twitter",
         "API",
-        "паттерны"
+        "соцсети"
       ],
       "url": "https://github.com/hikari-2424/awesome-reasonix/blob/main/skills/x-api.md",
       "rawUrl": "https://raw.githubusercontent.com/hikari-2424/awesome-reasonix/main/skills/x-api.md",
