@@ -3643,7 +3643,7 @@
       "category": "后端开发",
       "description": "Spring Security 最佳实践：认证、授权、CSRF、密钥管理、限流。",
       "description_en": "Spring Security best practices for authn/authz, validation, CSRF, secrets, headers, rate limiting, and dependency sec...",
-      "description_ru": "Лучшие практики Spring Security: аутентификация, авторизация, CSRF, секреты, ограничение速率.",
+      "description_ru": "Лучшие практики Spring Security: аутентификация, авторизация, CSRF, секреты, ограничение скорости.",
       "tags": [
         "Spring",
         "安全",
