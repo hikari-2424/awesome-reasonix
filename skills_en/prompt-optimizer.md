@@ -1,0 +1,385 @@
+---
+name: prompt-optimizer
+description: >-
+  Analyze raw prompts, identify intent and gaps, match ECC components
+  (skills/commands/agents/hooks), and output a ready-to-paste optimized
+  prompt. Advisory role only 鈥?never executes the task itself.
+  TRIGGER when: user says "optimize prompt", "improve my prompt",
+  "how to write a prompt for", "help me prompt", "rewrite this prompt",
+  or explicitly asks to enhance prompt quality. Also triggers on Chinese
+  equivalents: "浼樺寲prompt", "鏀硅繘prompt", "鎬庝箞鍐檖rompt", "甯垜浼樺寲杩欎釜鎸囦护".
+  DO NOT TRIGGER when: user wants the task executed directly, or says
+  "just do it" / "鐩存帴鍋?. DO NOT TRIGGER when user says "浼樺寲浠ｇ爜",
+  "浼樺寲鎬ц兘", "optimize performance", "optimize this code" 鈥?those are
+  refactoring/performance tasks, not prompt optimization.
+metadata:
+  author: YannJY02
+  version: "1.0.0"
+---
+
+# Prompt Optimizer
+
+Analyze a draft prompt, critique it, match it to ECC ecosystem components,
+and output a complete optimized prompt the user can paste and run.
+
+## When to Use
+
+- User says "optimize this prompt", "improve my prompt", "rewrite this prompt"
+- User says "help me write a better prompt for..."
+- User says "what's the best way to ask Claude Code to..."
+- User says "浼樺寲prompt", "鏀硅繘prompt", "鎬庝箞鍐檖rompt", "甯垜浼樺寲杩欎釜鎸囦护"
+- User pastes a draft prompt and asks for feedback or enhancement
+- User says "I don't know how to prompt for this"
+- User says "how should I use ECC for..."
+- User explicitly invokes `/prompt-optimize`
+
+### Do Not Use When
+
+- User wants the task done directly (just execute it)
+- User says "浼樺寲浠ｇ爜", "浼樺寲鎬ц兘", "optimize this code", "optimize performance" 鈥?these are refactoring tasks, not prompt optimization
+- User is asking about ECC configuration (use `configure-ecc` instead)
+- User wants a skill inventory (use `skill-stocktake` instead)
+- User says "just do it" or "鐩存帴鍋?
+
+## How It Works
+
+**Advisory only 鈥?do not execute the user's task.**
+
+Do NOT write code, create files, run commands, or take any implementation
+action. Your ONLY output is an analysis plus an optimized prompt.
+
+If the user says "just do it", "鐩存帴鍋?, or "don't optimize, just execute",
+do not switch into implementation mode inside this skill. Tell the user this
+skill only produces optimized prompts, and instruct them to make a normal
+task request if they want execution instead.
+
+Run this 6-phase pipeline sequentially. Present results using the Output Format below.
+
+### Analysis Pipeline
+
+### Phase 0: Project Detection
+
+Before analyzing the prompt, detect the current project context:
+
+1. Check if a `CLAUDE.md` exists in the working directory 鈥?read it for project conventions
+2. Detect tech stack from project files:
+   - `package.json` 鈫?Node.js / TypeScript / React / Next.js
+   - `go.mod` 鈫?Go
+   - `pyproject.toml` / `requirements.txt` 鈫?Python
+   - `Cargo.toml` 鈫?Rust
+   - `build.gradle` / `pom.xml` 鈫?Java / Kotlin / Spring Boot
+   - `Package.swift` 鈫?Swift
+   - `Gemfile` 鈫?Ruby
+   - `composer.json` 鈫?PHP
+   - `*.csproj` / `*.sln` 鈫?.NET
+   - `Makefile` / `CMakeLists.txt` 鈫?C / C++
+   - `cpanfile` / `Makefile.PL` 鈫?Perl
+3. Note detected tech stack for use in Phase 3 and Phase 4
+
+If no project files are found (e.g., the prompt is abstract or for a new project),
+skip detection and flag "tech stack unknown" in Phase 4.
+
+### Phase 1: Intent Detection
+
+Classify the user's task into one or more categories:
+
+| Category | Signal Words | Example |
+|----------|-------------|---------|
+| New Feature | build, create, add, implement, 鍒涘缓, 瀹炵幇, 娣诲姞 | "Build a login page" |
+| Bug Fix | fix, broken, not working, error, 淇, 鎶ラ敊 | "Fix the auth flow" |
+| Refactor | refactor, clean up, restructure, 閲嶆瀯, 鏁寸悊 | "Refactor the API layer" |
+| Research | how to, what is, explore, investigate, 鎬庝箞, 濡備綍 | "How to add SSO" |
+| Testing | test, coverage, verify, 娴嬭瘯, 瑕嗙洊鐜?| "Add tests for the cart" |
+| Review | review, audit, check, 瀹℃煡, 妫€鏌?| "Review my PR" |
+| Documentation | document, update docs, 鏂囨。 | "Update the API docs" |
+| Infrastructure | deploy, CI, docker, database, 閮ㄧ讲, 鏁版嵁搴?| "Set up CI/CD pipeline" |
+| Design | design, architecture, plan, 璁捐, 鏋舵瀯 | "Design the data model" |
+
+### Phase 2: Scope Assessment
+
+If Phase 0 detected a project, use codebase size as a signal. Otherwise, estimate
+from the prompt description alone and mark the estimate as uncertain.
+
+| Scope | Heuristic | Orchestration |
+|-------|-----------|---------------|
+| TRIVIAL | Single file, < 50 lines | Direct execution |
+| LOW | Single component or module | Single command or skill |
+| MEDIUM | Multiple components, same domain | Command chain + /verify |
+| HIGH | Cross-domain, 5+ files | /plan first, then phased execution |
+| EPIC | Multi-session, multi-PR, architectural shift | Use blueprint skill for multi-session plan |
+
+### Phase 3: ECC Component Matching
+
+Map intent + scope + tech stack (from Phase 0) to specific ECC components.
+
+#### By Intent Type
+
+| Intent | Commands | Skills | Agents |
+|--------|----------|--------|--------|
+| New Feature | /plan, /tdd, /code-review, /verify | tdd-workflow, verification-loop | planner, tdd-guide, code-reviewer |
+| Bug Fix | /tdd, /build-fix, /verify | tdd-workflow | tdd-guide, build-error-resolver |
+| Refactor | /refactor-clean, /code-review, /verify | verification-loop | refactor-cleaner, code-reviewer |
+| Research | /plan | search-first, iterative-retrieval | 鈥?|
+| Testing | /tdd, /e2e, /test-coverage | tdd-workflow, e2e-testing | tdd-guide, e2e-runner |
+| Review | /code-review | security-review | code-reviewer, security-reviewer |
+| Documentation | /update-docs, /update-codemaps | 鈥?| doc-updater |
+| Infrastructure | /plan, /verify | docker-patterns, deployment-patterns, database-migrations | architect |
+| Design (MEDIUM-HIGH) | /plan | 鈥?| planner, architect |
+| Design (EPIC) | 鈥?| blueprint (invoke as skill) | planner, architect |
+
+#### By Tech Stack
+
+| Tech Stack | Skills to Add | Agent |
+|------------|--------------|-------|
+| Python / Django | django-patterns, django-tdd, django-security, django-verification, python-patterns, python-testing | python-reviewer |
+| Go | golang-patterns, golang-testing | go-reviewer, go-build-resolver |
+| Spring Boot / Java | springboot-patterns, springboot-tdd, springboot-security, springboot-verification, java-coding-standards, jpa-patterns | code-reviewer |
+| Kotlin / Android | kotlin-coroutines-flows, compose-multiplatform-patterns, android-clean-architecture | kotlin-reviewer |
+| TypeScript / React | frontend-patterns, backend-patterns, coding-standards | code-reviewer |
+| Swift / iOS | swiftui-patterns, swift-concurrency-6-2, swift-actor-persistence, swift-protocol-di-testing | code-reviewer |
+| PostgreSQL | postgres-patterns, database-migrations | database-reviewer |
+| Perl | perl-patterns, perl-testing, perl-security | code-reviewer |
+| C++ | cpp-coding-standards, cpp-testing | code-reviewer |
+| Other / Unlisted | coding-standards (universal) | code-reviewer |
+
+### Phase 4: Missing Context Detection
+
+Scan the prompt for missing critical information. Check each item and mark
+whether Phase 0 auto-detected it or the user must supply it:
+
+- [ ] **Tech stack** 鈥?Detected in Phase 0, or must user specify?
+- [ ] **Target scope** 鈥?Files, directories, or modules mentioned?
+- [ ] **Acceptance criteria** 鈥?How to know the task is done?
+- [ ] **Error handling** 鈥?Edge cases and failure modes addressed?
+- [ ] **Security requirements** 鈥?Auth, input validation, secrets?
+- [ ] **Testing expectations** 鈥?Unit, integration, E2E?
+- [ ] **Performance constraints** 鈥?Load, latency, resource limits?
+- [ ] **UI/UX requirements** 鈥?Design specs, responsive, a11y? (if frontend)
+- [ ] **Database changes** 鈥?Schema, migrations, indexes? (if data layer)
+- [ ] **Existing patterns** 鈥?Reference files or conventions to follow?
+- [ ] **Scope boundaries** 鈥?What NOT to do?
+
+**If 3+ critical items are missing**, ask the user up to 3 clarification
+questions before generating the optimized prompt. Then incorporate the
+answers into the optimized prompt.
+
+### Phase 5: Workflow & Model Recommendation
+
+Determine where this prompt sits in the development lifecycle:
+
+```
+Research 鈫?Plan 鈫?Implement (TDD) 鈫?Review 鈫?Verify 鈫?Commit
+```
+
+For MEDIUM+ tasks, always start with /plan. For EPIC tasks, use blueprint skill.
+
+**Model recommendation** (include in output):
+
+| Scope | Recommended Model | Rationale |
+|-------|------------------|-----------|
+| TRIVIAL-LOW | Sonnet 4.6 | Fast, cost-efficient for simple tasks |
+| MEDIUM | Sonnet 4.6 | Best coding model for standard work |
+| HIGH | Sonnet 4.6 (main) + Opus 4.6 (planning) | Opus for architecture, Sonnet for implementation |
+| EPIC | Opus 4.6 (blueprint) + Sonnet 4.6 (execution) | Deep reasoning for multi-session planning |
+
+**Multi-prompt splitting** (for HIGH/EPIC scope):
+
+For tasks that exceed a single session, split into sequential prompts:
+- Prompt 1: Research + Plan (use search-first skill, then /plan)
+- Prompt 2-N: Implement one phase per prompt (each ends with /verify)
+- Final Prompt: Integration test + /code-review across all phases
+- Use /save-session and /resume-session to preserve context between sessions
+
+---
+
+## Output Format
+
+Present your analysis in this exact structure. Respond in the same language
+as the user's input.
+
+### Section 1: Prompt Diagnosis
+
+**Strengths:** List what the original prompt does well.
+
+**Issues:**
+
+| Issue | Impact | Suggested Fix |
+|-------|--------|---------------|
+| (problem) | (consequence) | (how to fix) |
+
+**Needs Clarification:** Numbered list of questions the user should answer.
+If Phase 0 auto-detected the answer, state it instead of asking.
+
+### Section 2: Recommended ECC Components
+
+| Type | Component | Purpose |
+|------|-----------|---------|
+| Command | /plan | Plan architecture before coding |
+| Skill | tdd-workflow | TDD methodology guidance |
+| Agent | code-reviewer | Post-implementation review |
+| Model | Sonnet 4.6 | Recommended for this scope |
+
+### Section 3: Optimized Prompt 鈥?Full Version
+
+Present the complete optimized prompt inside a single fenced code block.
+The prompt must be self-contained and ready to copy-paste. Include:
+- Clear task description with context
+- Tech stack (detected or specified)
+- /command invocations at the right workflow stages
+- Acceptance criteria
+- Verification steps
+- Scope boundaries (what NOT to do)
+
+For items that reference blueprint, write: "Use the blueprint skill to..."
+(not `/blueprint`, since blueprint is a skill, not a command).
+
+### Section 4: Optimized Prompt 鈥?Quick Version
+
+A compact version for experienced ECC users. Vary by intent type:
+
+| Intent | Quick Pattern |
+|--------|--------------|
+| New Feature | `/plan [feature]. /tdd to implement. /code-review. /verify.` |
+| Bug Fix | `/tdd 鈥?write failing test for [bug]. Fix to green. /verify.` |
+| Refactor | `/refactor-clean [scope]. /code-review. /verify.` |
+| Research | `Use search-first skill for [topic]. /plan based on findings.` |
+| Testing | `/tdd [module]. /e2e for critical flows. /test-coverage.` |
+| Review | `/code-review. Then use security-reviewer agent.` |
+| Docs | `/update-docs. /update-codemaps.` |
+| EPIC | `Use blueprint skill for "[objective]". Execute phases with /verify gates.` |
+
+### Section 5: Enhancement Rationale
+
+| Enhancement | Reason |
+|-------------|--------|
+| (what was added) | (why it matters) |
+
+### Footer
+
+> Not what you need? Tell me what to adjust, or make a normal task request
+> if you want execution instead of prompt optimization.
+
+---
+
+## Examples
+
+### Trigger Examples
+
+- "Optimize this prompt for ECC"
+- "Rewrite this prompt so Claude Code uses the right commands"
+- "甯垜浼樺寲杩欎釜鎸囦护"
+- "How should I prompt ECC for this task?"
+
+### Example 1: Vague Chinese Prompt (Project Detected)
+
+**User input:**
+```
+甯垜鍐欎竴涓敤鎴风櫥褰曢〉闈?```
+
+**Phase 0 detects:** `package.json` with Next.js 15, TypeScript, Tailwind CSS
+
+**Optimized Prompt (Full):**
+```
+浣跨敤椤圭洰鐜版湁鎶€鏈爤锛圢ext.js 15 + TypeScript + Tailwind CSS锛夊疄鐜扮敤鎴风櫥褰曢〉闈€?
+鎶€鏈姹傦細
+- 娌跨敤椤圭洰鐜版湁鐨勭粍浠剁粨鏋勫拰璺敱绾﹀畾
+- 琛ㄥ崟楠岃瘉浣跨敤椤圭洰涓凡鏈夌殑楠岃瘉鏂规锛堟鏌ユ槸鍚﹀凡鐢?Zod/Yup/鍏朵粬锛?- 璁よ瘉鏂瑰紡锛氭部鐢ㄩ」鐩幇鏈夎璇佹柟妗堬紙濡傛棤锛岄粯璁?JWT锛?- 鍖呭惈锛氶偖绠?瀵嗙爜鐧诲綍琛ㄥ崟銆佽〃鍗曢獙璇併€侀敊璇彁绀恒€佸姞杞界姸鎬併€佸搷搴斿紡甯冨眬
+
+宸ヤ綔娴侊細
+1. /plan 鍏堣鍒掔粍浠剁粨鏋勫拰璁よ瘉娴佺▼锛屽弬鑰冪幇鏈夐〉闈㈢殑妯″紡
+2. /tdd 娴嬭瘯鍏堣锛氱紪鍐欑櫥褰曡〃鍗曠殑鍗曞厓娴嬭瘯鍜岃璇佹祦绋嬬殑闆嗘垚娴嬭瘯
+3. 瀹炵幇鐧诲綍椤甸潰鍜岃璇侀€昏緫
+4. /code-review 瀹℃煡瀹炵幇
+5. /verify 楠岃瘉鎵€鏈夋祴璇曢€氳繃涓旈〉闈㈡甯告覆鏌?
+瀹夊叏瑕佹眰锛?- 瀵嗙爜涓嶆槑鏂囦紶杈?- 闃叉鏆村姏鐮磋В锛坮ate limiting锛?- XSS 闃叉姢
+- CSRF token
+
+楠屾敹鏍囧噯锛?- 鎵€鏈夋祴璇曢€氳繃锛岃鐩栫巼 80%+
+- 椤甸潰鍦ㄧЩ鍔ㄧ鍜屾闈㈢姝ｅ父娓叉煋
+- 鐧诲綍鎴愬姛璺宠浆鍒?dashboard锛屽け璐ユ樉绀洪敊璇俊鎭?
+涓嶈鍋氾細
+- 涓嶈瀹炵幇娉ㄥ唽椤甸潰
+- 涓嶈瀹炵幇蹇樿瀵嗙爜鍔熻兘
+- 涓嶈淇敼鐜版湁鐨勮矾鐢辩粨鏋?```
+
+### Example 2: Moderate English Prompt
+
+**User input:**
+```
+Add a REST API endpoint for user profile updates with validation
+```
+
+**Phase 0 detects:** `go.mod` with Go 1.22, Chi router
+
+**Optimized Prompt (Full):**
+```
+Add a REST API endpoint for user profile updates (PATCH /api/users/:id).
+
+Tech stack: Go 1.22 + Chi router (detected from project)
+
+Requirements:
+- PATCH /api/users/:id 鈥?partial update of user profile
+- Input validation for fields: name, email, avatar_url, bio
+- Auth: require valid token, users can only update own profile
+- Return 200 with updated user on success
+- Return 400 with validation errors on invalid input
+- Return 401/403 for auth failures
+- Follow existing API patterns in the codebase
+
+Workflow:
+1. /plan the endpoint structure, middleware chain, and validation logic
+2. /tdd 鈥?write table-driven tests for success, validation failure, auth failure, not-found
+3. Implement following existing handler patterns
+4. /go-review
+5. /verify 鈥?run full test suite, confirm no regressions
+
+Do not:
+- Modify existing endpoints
+- Change the database schema (use existing user table)
+- Add new dependencies without checking existing ones first (use search-first skill)
+```
+
+### Example 3: EPIC Project
+
+**User input:**
+```
+Migrate our monolith to microservices
+```
+
+**Optimized Prompt (Full):**
+```
+Use the blueprint skill to plan: "Migrate monolith to microservices architecture"
+
+Before executing, answer these questions in the blueprint:
+1. Which domain boundaries exist in the current monolith?
+2. Which service should be extracted first (lowest coupling)?
+3. Communication pattern: REST APIs, gRPC, or event-driven (Kafka/RabbitMQ)?
+4. Database strategy: shared DB initially or database-per-service from start?
+5. Deployment target: Kubernetes, Docker Compose, or serverless?
+
+The blueprint should produce phases like:
+- Phase 1: Identify service boundaries and create domain map
+- Phase 2: Set up infrastructure (API gateway, service mesh, CI/CD per service)
+- Phase 3: Extract first service (strangler fig pattern)
+- Phase 4: Verify with integration tests, then extract next service
+- Phase N: Decommission monolith
+
+Each phase = 1 PR, with /verify gates between phases.
+Use /save-session between phases. Use /resume-session to continue.
+Use git worktrees for parallel service extraction when dependencies allow.
+
+Recommended: Opus 4.6 for blueprint planning, Sonnet 4.6 for phase execution.
+```
+
+---
+
+## Related Components
+
+| Component | When to Reference |
+|-----------|------------------|
+| `configure-ecc` | User hasn't set up ECC yet |
+| `skill-stocktake` | Audit which components are installed (use instead of hardcoded catalog) |
+| `search-first` | Research phase in optimized prompts |
+| `blueprint` | EPIC-scope optimized prompts (invoke as skill, not command) |
+| `strategic-compact` | Long session context management |
+| `cost-aware-llm-pipeline` | Token optimization recommendations |
